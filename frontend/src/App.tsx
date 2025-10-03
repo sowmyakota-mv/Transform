@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import Herosection from './components/Herosection'
@@ -12,7 +11,6 @@ import RegisterCTA from './components/RegisterCTA'
 import Footersection from './components/Footersection'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
       <div>
