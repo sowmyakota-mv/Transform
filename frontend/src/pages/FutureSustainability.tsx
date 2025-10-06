@@ -77,16 +77,6 @@ const FutureSustainability: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleMouseEnter = (index: number, event: React.MouseEvent<HTMLImageElement>) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    setPopupPos({ x: rect.left + rect.width / 2, y: rect.top + window.scrollY + rect.height + 10 });
-    setHoveredIndex(index);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredIndex(null);
-  };
-
   return (
     <section id="sustainability" className="bg-gradient-to-b from-white to-green-50 py-16 px-10 md:px-24 relative">
 
