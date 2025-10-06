@@ -64,7 +64,7 @@ const Aboutsection: React.FC = () => {
           <p
             ref={h2Ref}
             data-id="h2"
-            className={`text-orange-500 font-extrabold uppercase mb-4 text-2xl transition-all duration-[1200ms] ${
+            className={`text-black-400 font-bold uppercase mb-4 text-2xl transition-all duration-[1200ms] ${
               visible.h2 ? "opacity-100 scale-100" : "opacity-0 scale-90"
             }`}
           >
@@ -89,45 +89,28 @@ const Aboutsection: React.FC = () => {
             operations.
           </p>
 
-          {/* Second paragraph with arrow */}
-          <p
+          {/* Second paragraph with Learn More button */}
+          <div
             ref={para2Ref}
             data-id="para2"
-            className={`text-base md:text-lg leading-relaxed mb-4 relative inline-block transition-all duration-[1200ms] ${
+            className={`text-base md:text-lg leading-relaxed mb-4 transition-all duration-[1200ms] ${
               visible.para2 ? "opacity-100 scale-100" : "opacity-0 scale-90"
             }`}
           >
             Blending deep sector insight with agile delivery and AI-driven
             technologies, we partner with clients across public and private
             sectors to turn bold ideas into tangible outcomes. We work
-            collaboratively — from vision to execution — so that transformation
-            sticks{" "}
-            <span className="inline-block ml-2">
-              <span className="inline-block w-10 h-10 rounded-full bg-orange-500 text-white font-extrabold text-4xl
-                flex items-center justify-center transition-all duration-300 ease-in-out
-                group-hover:animate-bounce-hover">
-                &#8594;
-              </span>
-            </span>
-          </p>
+            collaboratively from vision to execution so that transformation
+            sticks.
+            <br />
+            <button className="mt-4 inline-flex items-center space-x-2 px-4 py-2 text-orange-500 font-semibold transition-all duration-300
+              rounded-lg hover:bg-orange-500 hover:text-white hover:shadow-md hover:border hover:border-orange-500">
+              <span>Learn More</span>
+              <span className="text-xl">&rarr;</span>
+            </button>
+          </div>
         </div>
       </div>
-
-      {/* Bounce animation on hover */}
-      <style>
-        {`
-          @keyframes bounce-hover {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-          }
-          .group-hover\\:animate-bounce-hover {
-            animation: none;
-          }
-          .group:hover .group-hover\\:animate-bounce-hover {
-            animation: bounce-hover 1s infinite ease-in-out;
-          }
-        `}
-      </style>
     </section>
   );
 };

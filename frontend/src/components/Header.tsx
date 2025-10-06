@@ -1,27 +1,36 @@
 import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-const navLinks = ["Home", "Explore Us", "Expertise", "Contact"];
+interface NavItem {
+  title: string;
+  href?: string;
+  submenu?: { title: string; href: string }[];
+}
+
+const navLinks: NavItem[] = [
+  { title: "Home", href: "/" },
+  {
+    title: "Explore Us",
+    submenu: [
+      { title: "About Transform", href: "/abouttransform" },
+      { title: "People Behind Innovation", href: "/people" },
+      { title: "Future Sustainability", href: "/sustainability" },
+      { title: "Community Impact", href: "/impact" },
+    ],
+  },
+  { title: "Expertise", href: "/expertise" },
+  { title: "Contact", href: "/contact" },
+];
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState("Home");
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const location = useLocation();
 
   // Detect scroll for bottom gradient
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-
-      // Find active section
-      navLinks.forEach((link) => {
-        const sectionId = link.toLowerCase().replace(/\s+/g, "");
-        const section = document.getElementById(sectionId);
-        if (section) {
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= 120 && rect.bottom >= 120) {
-            setActiveLink(link);
-          }
-        }
-      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -44,25 +53,58 @@ const Header: React.FC = () => {
         }}
       >
         <div className="max-w-7xl mx-auto py-4 grid grid-cols-3 items-center">
-          {/* Left: Title */}
+          {/* Left: Logo/Title */}
           <div className="text-3xl font-bold text-orange-900">Transform</div>
 
           {/* Middle: Nav Links */}
-          <nav className="flex justify-center space-x-8">
+          <nav className="flex justify-center space-x-8 relative">
             {navLinks.map((link) => {
-              const isActive = activeLink === link;
-              return (
-                <a
-                  key={link}
-                  href={`#${link.toLowerCase().replace(/\s+/g, "")}`}
+              const isActive = location.pathname === link.href;
+
+              return link.submenu ? (
+                <div
+                  key={link.title}
+                  className="relative group"
+                  onMouseEnter={() => setOpenDropdown(link.title)}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
+                  <button
+                    className={`font-medium ${
+                      isActive
+                        ? "text-purple-700 border-b-2 border-purple-700"
+                        : "text-orange-900 hover:underline"
+                    }`}
+                  >
+                    {link.title}
+                  </button>
+
+                  {/* Dropdown Menu */}
+                  {openDropdown === link.title && (
+                    <div className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2 z-50">
+                      {link.submenu.map((item) => (
+                        <Link
+                          key={item.title}
+                          to={item.href}
+                          className="block px-4 py-2 text-sm text-orange-900 hover:bg-gray-100"
+                        >
+                          {item.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.title}
+                  to={link.href || "/"}
                   className={`font-medium ${
                     isActive
                       ? "text-purple-700 border-b-2 border-purple-700"
                       : "text-orange-900 hover:underline"
                   }`}
                 >
-                  {link}
-                </a>
+                  {link.title}
+                </Link>
               );
             })}
           </nav>
