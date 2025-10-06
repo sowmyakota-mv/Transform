@@ -272,7 +272,7 @@ const FutureSustainability: React.FC = () => {
         </div>
       </ScrollAnimation>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fade-up {
           0% {
             opacity: 0;

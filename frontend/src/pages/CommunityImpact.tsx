@@ -133,7 +133,7 @@ const CommunityImpact: React.FC = () => {
       </div>
 
       {/* CSS Animations */}
-      <style jsx>{`
+      <style>{`
         @keyframes fade-up { 0% {opacity:0; transform:translateY(20px);} 100% {opacity:1; transform:translateY(0);} }
         .animate-fade-up { animation: fade-up 1s forwards; }
       `}</style>
