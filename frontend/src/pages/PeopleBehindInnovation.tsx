@@ -52,7 +52,7 @@ const PeopleBehindInnovation: React.FC = () => {
   return (
     <section
       id="people"
-      className="bg-gradient-to-b from-white to-blue-50 py-24 px-6 sm:px-10 md:px-24 overflow-x-hidden"
+      className="bg-gradient-to-b from-white to-blue-50 py-24 px-6 sm:px-10 md:px-24"
     >
       {/* Hero Section */}
       <ScrollAnimation delay={100} once threshold={0.1}>
@@ -82,7 +82,7 @@ const PeopleBehindInnovation: React.FC = () => {
 
       {/* Team Members Section */}
       <div className="max-w-6xl mx-auto mb-16">
-        <ScrollAnimation delay={250} once threshold={0.1}>
+        <ScrollAnimation delay={250} once threshold={0.05}>
           <h3 className="text-3xl font-bold text-purple-800 mb-10 text-center">
             Meet Our Leadership Team
           </h3>
@@ -90,25 +90,21 @@ const PeopleBehindInnovation: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {team.map((member, index) => (
-            <ScrollAnimation
+            <div
               key={index}
-              delay={100 + index * 50}
-              once
-              threshold={0.05} // triggers sooner for mobile
+              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500"
             >
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  loading="lazy"
-                  className="w-full h-56 sm:h-60 object-cover"
-                />
-                <div className="p-5 text-center">
-                  <h4 className="text-lg font-semibold text-gray-900">{member.name}</h4>
-                  <p className="text-sm text-purple-700 font-medium">{member.role}</p>
-                </div>
+              <img
+                src={member.image}
+                alt={member.name}
+                loading="lazy"
+                className="w-full h-56 sm:h-60 object-cover"
+              />
+              <div className="p-5 text-center">
+                <h4 className="text-lg font-semibold text-gray-900">{member.name}</h4>
+                <p className="text-sm text-purple-700 font-medium">{member.role}</p>
               </div>
-            </ScrollAnimation>
+            </div>
           ))}
         </div>
       </div>
