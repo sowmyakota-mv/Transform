@@ -43,7 +43,7 @@ const Header: React.FC = () => {
     <>
       {/* Header */}
       <header
-        className="fixed left-8 right-8 mt-5 z-50"
+        className="fixed left-8 right-8 mt-5 z-50  overflow-hidden"
         style={{
           paddingLeft: "36px",
           paddingRight: "36px",
@@ -58,8 +58,8 @@ const Header: React.FC = () => {
           {/* Left: Logo/Title */}
           <div className="text-3xl font-bold text-orange-900">Transform</div>
 
-          {/* Middle: Nav Links */}
-          <nav className="flex justify-center space-x-8 relative">
+          {/* Middle: Nav Links (hidden on mobile) */}
+          <nav className="hidden md:flex justify-center space-x-8 relative">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.href;
 
@@ -111,14 +111,14 @@ const Header: React.FC = () => {
             })}
           </nav>
 
-          {/* Right: Register Button */}
-          <div className="flex justify-end">
+          {/* Right: Register Button (hidden on mobile) */}
+          <div className="hidden md:flex justify-end">
             <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg">
               Register
             </button>
           </div>
-        </div>
-        {/* Mobile: Hamburger Button */}
+
+          {/* Mobile: Hamburger Button */}
           <div className="flex justify-end md:hidden">
             <button onClick={() => setMenuOpen(!menuOpen)}>
               {menuOpen ? (
@@ -128,6 +128,7 @@ const Header: React.FC = () => {
               )}
             </button>
           </div>
+        </div>
 
         {/* Mobile Menu */}
         {menuOpen && (
@@ -172,7 +173,6 @@ const Header: React.FC = () => {
             </div>
           </div>
         )}
-
       </header>
 
       {/* Full-width bottom gradient (appears on scroll) */}
