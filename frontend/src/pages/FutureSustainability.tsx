@@ -130,28 +130,28 @@ const FutureSustainability: React.FC = () => {
 
         {/* Carousel */}
         <div className="relative max-w-4xl mx-auto mt-[-40px] bg-white rounded-3xl shadow-xl border border-green-300 overflow-hidden py-10 px-10 z-20">
-          <div className="overflow-hidden relative h-[250px]">
-            <div
-              className="flex transition-transform duration-700 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-              {pillars.map((pillar, i) => (
-                <div key={i} className="w-full flex-shrink-0 text-center px-4">
-                  <h4 className="text-2xl font-bold text-green-800 mb-3">
-                    {pillar.title}
-                  </h4>
-                  <p className="text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed">
-                    {pillar.desc}
-                  </p>
-                  <ul className="list-disc list-inside text-gray-600 text-left inline-block max-w-md mx-auto space-y-1">
-                    {pillar.points.map((pt, j) => (
-                      <li key={j}>{pt}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
+          <div className="overflow-hidden relative h-[250px] sm:h-auto">
+  <div
+    className="flex transition-transform duration-700 ease-in-out"
+    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+  >
+    {pillars.map((pillar, i) => (
+      <div key={i} className="w-full flex-shrink-0 text-center px-4 py-6">
+        <h4 className="text-2xl font-bold text-green-800 mb-3">
+          {pillar.title}
+        </h4>
+        <p className="text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed">
+          {pillar.desc}
+        </p>
+        <ul className="list-disc list-inside text-gray-600 text-left inline-block max-w-md mx-auto space-y-1">
+          {pillar.points.map((pt, j) => (
+            <li key={j}>{pt}</li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</div>
 
           {/* Arrows */}
           <button
