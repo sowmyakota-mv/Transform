@@ -41,78 +41,84 @@ const Aboutsection: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative py-20 bg-white overflow-hidden group">
-      <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center">
-        {/* Left: Image */}
-        <div
-          ref={imageRef}
-          data-id="image"
-          className={`relative w-full lg:w-1/2 flex justify-center mb-10 lg:mb-0 transition-all duration-[1200ms] ${
-            visible.image ? "opacity-100 scale-125" : "opacity-0 scale-110"
+  <section className="relative py-20 bg-white overflow-hidden group">
+    <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center">
+      {/* Left: Image */}
+      <div
+        ref={imageRef}
+        data-id="image"
+        className={`relative w-full lg:w-1/2 flex justify-center mb-10 lg:mb-0 transition-all duration-[1200ms] ${
+          visible.image ? "opacity-100 scale-125" : "opacity-0 scale-110"
+        }`}
+      >
+        <img
+          src={aboutImage}
+          alt="Transform UK Team"
+          className="w-full max-w-3xl h-auto object-cover scale-125 ml-18 rounded-2xl"
+        />
+      </div>
+
+      {/* Text Section */}
+      <div
+        className="lg:relative lg:top-auto lg:left-auto lg:w-1/2 lg:ml-20 z-20 text-gray-800
+        absolute top-16 left-8 
+        sm:static sm:mt-0
+        bg-white/90 backdrop-blur-sm rounded-2xl p-4 md:p-0 md:bg-transparent"
+      >
+        {/* Section label */}
+        <p
+          ref={h2Ref}
+          data-id="h2"
+          className={`text-black-400 font-bold uppercase mb-4 text-2xl transition-all duration-[1200ms] ${
+            visible.h2 ? "opacity-100 scale-100" : "opacity-0 scale-90"
           }`}
         >
-          <img
-            src={aboutImage}
-            alt="Transform UK Team"
-            className="w-full max-w-3xl h-auto object-cover scale-125 ml-18"
-          />
-        </div>
+          Who We Are
+        </p>
 
-        {/* Text overlay */}
-        <div className="absolute top-16 left-8 lg:relative lg:top-auto lg:left-auto lg:w-1/2 lg:ml-20 z-20 text-gray-800">
-          {/* Section label */}
-          <p
-            ref={h2Ref}
-            data-id="h2"
-            className={`text-black-400 font-bold uppercase mb-4 text-2xl transition-all duration-[1200ms] ${
-              visible.h2 ? "opacity-100 scale-100" : "opacity-0 scale-90"
-            }`}
-          >
-            Who We Are
-          </p>
+        {/* First paragraph */}
+        <p
+          ref={para1Ref}
+          data-id="para1"
+          className={`text-base md:text-lg leading-relaxed mb-4 transition-all duration-[1200ms] ${
+            visible.para1 ? "opacity-100 scale-100" : "opacity-0 scale-90"
+          }`}
+        >
+          <span className="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500">
+            Welcome to transform your innovation
+          </span>
+          , we are a full-spectrum digital transformation consultancy rooted in
+          strategy, technology, and human-first design. Our mission is to help
+          organisations break through complexity, connect data and systems, and
+          unlock lasting change for their people, customers, and operations.
+        </p>
 
-          {/* First paragraph */}
-          <p
-            ref={para1Ref}
-            data-id="para1"
-            className={`text-base md:text-lg leading-relaxed mb-4 transition-all duration-[1200ms] ${
-              visible.para1 ? "opacity-100 scale-100" : "opacity-0 scale-90"
-            }`}
+        {/* Second paragraph with Learn More button */}
+        <div
+          ref={para2Ref}
+          data-id="para2"
+          className={`text-base md:text-lg leading-relaxed mb-4 transition-all duration-[1200ms] ${
+            visible.para2 ? "opacity-100 scale-100" : "opacity-0 scale-90"
+          }`}
+        >
+          Blending deep sector insight with agile delivery and AI-driven
+          technologies, we partner with clients across public and private
+          sectors to turn bold ideas into tangible outcomes. We work
+          collaboratively from vision to execution so that transformation
+          sticks.
+          <br />
+          <button
+            className="mt-4 inline-flex items-center space-x-2 px-4 py-2 text-orange-500 font-semibold transition-all duration-300
+              rounded-lg hover:bg-orange-500 hover:text-white hover:shadow-md hover:border hover:border-orange-500"
           >
-            <span className="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500">
-              Welcome to transform your innovation
-            </span>
-            , we are a full-spectrum digital transformation consultancy rooted
-            in strategy, technology, and human-first design. Our mission is to
-            help organisations break through complexity, connect data and
-            systems, and unlock lasting change for their people, customers, and
-            operations.
-          </p>
-
-          {/* Second paragraph with Learn More button */}
-          <div
-            ref={para2Ref}
-            data-id="para2"
-            className={`text-base md:text-lg leading-relaxed mb-4 transition-all duration-[1200ms] ${
-              visible.para2 ? "opacity-100 scale-100" : "opacity-0 scale-90"
-            }`}
-          >
-            Blending deep sector insight with agile delivery and AI-driven
-            technologies, we partner with clients across public and private
-            sectors to turn bold ideas into tangible outcomes. We work
-            collaboratively from vision to execution so that transformation
-            sticks.
-            <br />
-            <button className="mt-4 inline-flex items-center space-x-2 px-4 py-2 text-orange-500 font-semibold transition-all duration-300
-              rounded-lg hover:bg-orange-500 hover:text-white hover:shadow-md hover:border hover:border-orange-500">
-              <span>Learn More</span>
-              <span className="text-xl">&rarr;</span>
-            </button>
-          </div>
+            <span>Learn More</span>
+            <span className="text-xl">&rarr;</span>
+          </button>
         </div>
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 };
 
 export default Aboutsection;
