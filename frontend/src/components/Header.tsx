@@ -168,17 +168,31 @@ const Header: React.FC = () => {
       </header>
 
       {/* Scroll Line */}
-      {scrolled && (
-        <div
-          className="fixed left-0 right-0 z-40"
-          style={{
-            top: "calc(5rem + 24px)",
-            height: "4px",
-            background: "linear-gradient(to right, #C4D7EF)",
-            opacity: 0.4,
-          }}
-        ></div>
-      )}
+{scrolled && (
+  <>
+    {/* Desktop Scroll Line */}
+    <div
+      className="hidden md:block fixed left-0 right-0 z-40"
+      style={{
+        top: "calc(5rem + 24px)",
+        height: "4px",
+        background: "linear-gradient(to right, #C4D7EF)",
+        opacity: 0.4,
+      }}
+    ></div>
+
+    {/* Mobile Scroll Line */}
+    <div
+      className="block md:hidden fixed left-0 right-0 z-40"
+      style={{
+        top: "90px", // smaller offset for mobile so no gap
+        height: "3px",
+        background: "linear-gradient(to right, #C4D7EF)",
+        opacity: 0.4,
+      }}
+    ></div>
+  </>
+)}
     </>
   );
 };
