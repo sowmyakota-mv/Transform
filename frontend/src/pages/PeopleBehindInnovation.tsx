@@ -3,27 +3,11 @@ import React, { useEffect, useState } from "react";
 import ScrollAnimation from "../animation/ScrollAnimation";
 
 const PeopleBehindInnovation: React.FC = () => {
-  const team = [
-    { name: "Emma Robertson", role: "CEO", image: "/team.jpg" },
-    { name: "Jane Barrett", role: "Chief Growth Officer", image: "/team.jpg" },
-    { name: "Johan Hogsander", role: "Sales Enablement MD", image: "/team.jpg" },
-    { name: "Athina Mason", role: "Consulting MD", image: "/team.jpg" },
-    { name: "Gita Singham-Willis", role: "Strategic Engagement Director", image: "/team.jpg" },
-    { name: "Tricia Phillips", role: "Chief Operating Officer", image: "/team.jpg" },
-    { name: "Cyril Law", role: "Director of Data Engineering and Technology", image: "/team.jpg" },
-    { name: "Meghan Walsh", role: "Head of Marketing & New Business", image: "/team.jpg" },
-    { name: "Dawn Cooke", role: "Director of Consulting", image: "/team.jpg" },
-    { name: "Bill James", role: "Chairman", image: "/team.jpg" },
-    { name: "Emily Chappell", role: "Head of People", image: "/team.jpg" },
-    { name: "Will Lowe", role: "Chief Data & AI Officer", image: "/team.jpg" },
-    { name: "Mark Redwood-Sayce", role: "Chief Financial Officer", image: "/team.jpg" },
-    { name: "Claire Robinson", role: "Director of Sustainable Business Consulting", image: "/team.jpg" },
-    { name: "Dave Jackson", role: "Director of Service Design", image: "/team.jpg" },
-    { name: "Dave Wood", role: "Chief Technology Officer", image: "/team.jpg" },
-    { name: "Ian Pocock", role: "Research and Service Design MD", image: "/team.jpg" },
-    { name: "Peter Rottier", role: "Product & Delivery MD", image: "/team.jpg" },
-    { name: "Nathan Kirkham", role: "Director of Technology Strategy & Architecture", image: "/team.jpg" },
-  ];
+  const team = Array.from({ length: 19 }).map((_, i) => ({
+    name: `Team Member ${i + 1}`,
+    role: "Role Placeholder",
+    image: "/team.jpg", // single placeholder in public folder
+  }));
 
   const voices = [
     {
@@ -50,11 +34,7 @@ const PeopleBehindInnovation: React.FC = () => {
   }, [voices.length]);
 
   return (
-    <section
-      id="people"
-      className="bg-gradient-to-b from-white to-blue-50 py-24 px-6 sm:px-10 md:px-24"
-    >
-      {/* Hero Section */}
+    <section className="bg-gradient-to-b from-white to-blue-50 py-24 px-6 sm:px-10 md:px-24">
       <ScrollAnimation delay={100} once threshold={0.1}>
         <div className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -66,7 +46,6 @@ const PeopleBehindInnovation: React.FC = () => {
         </div>
       </ScrollAnimation>
 
-      {/* Core Team Values */}
       <ScrollAnimation delay={200} once threshold={0.1}>
         <div className="max-w-5xl mx-auto mb-20">
           <h3 className="text-2xl font-semibold text-purple-700 mb-4">What Defines Our Team</h3>
@@ -80,7 +59,6 @@ const PeopleBehindInnovation: React.FC = () => {
         </div>
       </ScrollAnimation>
 
-      {/* Team Members Section */}
       <div className="max-w-6xl mx-auto mb-16">
         <ScrollAnimation delay={250} once threshold={0.05}>
           <h3 className="text-3xl font-bold text-purple-800 mb-10 text-center">
@@ -109,7 +87,6 @@ const PeopleBehindInnovation: React.FC = () => {
         </div>
       </div>
 
-      {/* Voices of Innovation */}
       <ScrollAnimation delay={300} once threshold={0.1}>
         <div className="bg-purple-50 rounded-2xl py-10 px-6 md:px-12 mb-12">
           <h3 className="text-2xl font-semibold text-purple-800 mb-6 text-center">
