@@ -186,7 +186,7 @@ const Header: React.FC = () => {
       className="block md:hidden fixed left-0 right-0 z-40"
       style={{
         top: "120px",
-        height: "3px",
+        height: "4px",
         background: "linear-gradient(to right, #C4D7EF)",
         opacity: 0.4,
       }}
