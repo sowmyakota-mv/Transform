@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 interface NavItem {
   title: string;
@@ -25,6 +26,7 @@ const navLinks: NavItem[] = [
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
   // Detect scroll for bottom gradient
@@ -116,6 +118,61 @@ const Header: React.FC = () => {
             </button>
           </div>
         </div>
+        {/* Mobile: Hamburger Button */}
+          <div className="flex justify-end md:hidden">
+            <button onClick={() => setMenuOpen(!menuOpen)}>
+              {menuOpen ? (
+                <X className="text-orange-900 w-7 h-7" />
+              ) : (
+                <Menu className="text-orange-900 w-7 h-7" />
+              )}
+            </button>
+          </div>
+
+        {/* Mobile Menu */}
+        {menuOpen && (
+          <div className="md:hidden bg-white rounded-b-2xl shadow-lg mt-2 px-6 py-4 space-y-3">
+            {navLinks.map((link) => (
+              <div key={link.title}>
+                {link.submenu ? (
+                  <details className="group">
+                    <summary className="cursor-pointer font-medium text-orange-900 hover:text-purple-700">
+                      {link.title}
+                    </summary>
+                    <div className="pl-4 mt-2 space-y-1">
+                      {link.submenu.map((sub) => (
+                        <Link
+                          key={sub.title}
+                          to={sub.href}
+                          className="block text-sm text-gray-700 hover:text-purple-700"
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          {sub.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </details>
+                ) : (
+                  <Link
+                    to={link.href || "/"}
+                    className="block font-medium text-orange-900 hover:text-purple-700"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {link.title}
+                  </Link>
+                )}
+              </div>
+            ))}
+
+            {/* Register Button in Mobile */}
+            <div className="pt-4">
+              <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-lg">
+                Register
+              </button>
+            </div>
+          </div>
+        )}
+
       </header>
 
       {/* Full-width bottom gradient (appears on scroll) */}
