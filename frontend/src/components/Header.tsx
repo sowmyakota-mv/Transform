@@ -30,9 +30,7 @@ const Header: React.FC = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -40,7 +38,7 @@ const Header: React.FC = () => {
   return (
     <>
       <header
-        className="fixed left-8 right-8 mt-5 z-50 overflow-hidden"
+        className="fixed left-8 right-8 mt-5 z-50 overflow-visible"
         style={{
           backgroundColor: "#ffffff",
           borderTop: "12px solid",
@@ -49,23 +47,26 @@ const Header: React.FC = () => {
             "linear-gradient(to right, #F13E84, #9D64EF, #5816AE)",
         }}
       >
-        {/* Header Container */}
         <div className="relative max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
-          {/* Logo / Title */}
+          {/* Logo */}
           <div className="text-3xl font-bold text-orange-900">Transform</div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex justify-center space-x-8">
+          <nav className="hidden md:flex justify-center space-x-8 relative">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.href;
               return link.submenu ? (
                 <div
                   key={link.title}
-                  className="relative group"
-                  onMouseEnter={() => setOpenDropdown(link.title)}
-                  onMouseLeave={() => setOpenDropdown(null)}
+                  className="relative"
                 >
                   <button
+                    type="button"
+                    onClick={() =>
+                      setOpenDropdown(
+                        openDropdown === link.title ? null : link.title
+                      )
+                    }
                     className={`font-medium ${
                       isActive
                         ? "text-purple-700 border-b-2 border-purple-700"
@@ -74,8 +75,13 @@ const Header: React.FC = () => {
                   >
                     {link.title}
                   </button>
+
+                  {/* Dropdown */}
                   {openDropdown === link.title && (
-                    <div className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2 z-50">
+                    <div
+                      className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2 z-50"
+                      onMouseLeave={() => setOpenDropdown(null)}
+                    >
                       {link.submenu.map((item) => (
                         <Link
                           key={item.title}
@@ -157,7 +163,6 @@ const Header: React.FC = () => {
                 )}
               </div>
             ))}
-
             <div className="pt-3">
               <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-lg">
                 Register
@@ -168,31 +173,29 @@ const Header: React.FC = () => {
       </header>
 
       {/* Scroll Line */}
-{scrolled && (
-  <>
-    {/* Desktop Scroll Line */}
-    <div
-      className="hidden md:block fixed left-0 right-0 z-40"
-      style={{
-        top: "calc(5rem + 24px)",
-        height: "4px",
-        background: "linear-gradient(to right, #C4D7EF)",
-        opacity: 0.4,
-      }}
-    ></div>
+      {scrolled && (
+        <>
+          <div
+            className="hidden md:block fixed left-0 right-0 z-40"
+            style={{
+              top: "calc(5rem + 24px)",
+              height: "4px",
+              background: "linear-gradient(to right, #C4D7EF)",
+              opacity: 0.4,
+            }}
+          ></div>
 
-    {/* Mobile Scroll Line */}
-    <div
-      className="block md:hidden fixed left-0 right-0 z-40"
-      style={{
-        top: "100px",
-        height: "4px",
-        background: "linear-gradient(to right, #C4D7EF)",
-        opacity: 0.4,
-      }}
-    ></div>
-  </>
-)}
+          <div
+            className="block md:hidden fixed left-0 right-0 z-40"
+            style={{
+              top: "100px",
+              height: "4px",
+              background: "linear-gradient(to right, #C4D7EF)",
+              opacity: 0.4,
+            }}
+          ></div>
+        </>
+      )}
     </>
   );
 };
