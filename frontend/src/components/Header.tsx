@@ -39,12 +39,9 @@ const Header: React.FC = () => {
 
   return (
     <>
-      {/* Header */}
       <header
         className="fixed left-8 right-8 mt-5 z-50 overflow-hidden"
         style={{
-          paddingLeft: "36px",
-          paddingRight: "36px",
           backgroundColor: "#ffffff",
           borderTop: "12px solid",
           borderImageSlice: 1,
@@ -52,15 +49,15 @@ const Header: React.FC = () => {
             "linear-gradient(to right, #F13E84, #9D64EF, #5816AE)",
         }}
       >
-        <div className="max-w-7xl mx-auto py-4 grid grid-cols-2 md:grid-cols-3 items-center">
-          {/* Left: Logo/Title */}
+        {/* Header Container */}
+        <div className="relative max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+          {/* Logo / Title */}
           <div className="text-3xl font-bold text-orange-900">Transform</div>
 
-          {/* Middle: Nav Links (hidden completely on mobile) */}
-          <nav className="hidden md:flex justify-center space-x-8 relative">
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex justify-center space-x-8">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.href;
-
               return link.submenu ? (
                 <div
                   key={link.title}
@@ -77,7 +74,6 @@ const Header: React.FC = () => {
                   >
                     {link.title}
                   </button>
-
                   {openDropdown === link.title && (
                     <div className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2 z-50">
                       {link.submenu.map((item) => (
@@ -108,15 +104,15 @@ const Header: React.FC = () => {
             })}
           </nav>
 
-          {/* Right: Register Button (hidden on mobile) */}
-          <div className="hidden md:flex justify-end">
+          {/* Desktop Register */}
+          <div className="hidden md:flex">
             <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg">
               Register
             </button>
           </div>
 
-          {/* Mobile: Hamburger Button */}
-          <div className="flex justify-end md:hidden">
+          {/* Mobile Hamburger */}
+          <div className="absolute right-6 md:hidden">
             <button onClick={() => setMenuOpen(!menuOpen)}>
               {menuOpen ? (
                 <X className="text-orange-900 w-7 h-7" />
@@ -127,9 +123,9 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Dropdown */}
         {menuOpen && (
-          <div className="md:hidden bg-white rounded-b-2xl shadow-lg mt-2 px-6 py-4 space-y-3">
+          <div className="md:hidden bg-white rounded-b-2xl shadow-md px-6 py-4 space-y-3 transition-all duration-300">
             {navLinks.map((link) => (
               <div key={link.title}>
                 {link.submenu ? (
@@ -162,8 +158,7 @@ const Header: React.FC = () => {
               </div>
             ))}
 
-            {/* Register Button in Mobile */}
-            <div className="pt-4">
+            <div className="pt-3">
               <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-lg">
                 Register
               </button>
@@ -172,7 +167,7 @@ const Header: React.FC = () => {
         )}
       </header>
 
-      {/* Scroll Gradient Line */}
+      {/* Scroll Line */}
       {scrolled && (
         <div
           className="fixed left-0 right-0 z-40"
