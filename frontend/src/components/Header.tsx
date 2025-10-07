@@ -29,12 +29,10 @@ const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  // Detect scroll for bottom gradient
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -43,7 +41,7 @@ const Header: React.FC = () => {
     <>
       {/* Header */}
       <header
-        className="fixed left-8 right-8 mt-5 z-50  overflow-hidden"
+        className="fixed left-8 right-8 mt-5 z-50 overflow-hidden"
         style={{
           paddingLeft: "36px",
           paddingRight: "36px",
@@ -54,11 +52,11 @@ const Header: React.FC = () => {
             "linear-gradient(to right, #F13E84, #9D64EF, #5816AE)",
         }}
       >
-        <div className="max-w-7xl mx-auto py-4 grid grid-cols-3 items-center">
+        <div className="max-w-7xl mx-auto py-4 grid grid-cols-2 md:grid-cols-3 items-center">
           {/* Left: Logo/Title */}
           <div className="text-3xl font-bold text-orange-900">Transform</div>
 
-          {/* Middle: Nav Links (hidden on mobile) */}
+          {/* Middle: Nav Links (hidden completely on mobile) */}
           <nav className="hidden md:flex justify-center space-x-8 relative">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.href;
@@ -80,7 +78,6 @@ const Header: React.FC = () => {
                     {link.title}
                   </button>
 
-                  {/* Dropdown Menu */}
                   {openDropdown === link.title && (
                     <div className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2 z-50">
                       {link.submenu.map((item) => (
@@ -175,7 +172,7 @@ const Header: React.FC = () => {
         )}
       </header>
 
-      {/* Full-width bottom gradient (appears on scroll) */}
+      {/* Scroll Gradient Line */}
       {scrolled && (
         <div
           className="fixed left-0 right-0 z-40"
