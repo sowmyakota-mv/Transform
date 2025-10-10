@@ -15,10 +15,24 @@ import AboutTransform from './pages/AboutTransform'
 import PeopleBehindInnovation from './pages/PeopleBehindInnovation'
 import FutureSustainability from './pages/FutureSustainability'
 import CommunityImpact from './pages/CommunityImpact'
+import DigitalTransformation from './pages/DigitalTransformation'
+import DataAnalytics from './pages/DataAIAnalytics'
+import PlatformEngineering from './pages/PlatformEngineering'
+import UXDesign from './pages/UXDesign'
+import BusinessIntelligence from './pages/BusinessIntelligence'
+import CloudSolutions from './pages/CloudSolutions'
+import CyberSecurity from './pages/CyberSecurity'
+import ITStrategy from './pages/ITStrategy'
+import ContactSection from './pages/ContactSection'
+import SustainabilityESG from './pages/SustainabilityESG'
+import PeopleChangeCapability from './pages/PeopleChangeCapability'
+import ProductManagementStrategy from './pages/ProductManagementStrategy'
+import ScrollToTop from './animation/ScrollToTop'
 
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <Header />
       <Routes>
         <Route path="/" element={
@@ -37,6 +51,18 @@ function App() {
         <Route path='/people' element={<PeopleBehindInnovation/>}/>
         <Route path='sustainability' element={<FutureSustainability/>}/>
         <Route path='impact' element={<CommunityImpact/>}/>
+        <Route path='/expertise/digital-transformation' element={<DigitalTransformation/>}/>
+        <Route path='/expertise/data-analytics' element={<DataAnalytics/>}/>
+        <Route path='/expertise/platform-engineering' element={<PlatformEngineering/>}/>
+        <Route path='/expertise/ux-design' element={<UXDesign/>}/>
+        <Route path='/expertise/sustainability' element={<SustainabilityESG/>}/>
+        <Route path='/expertise/people-change' element={<PeopleChangeCapability/>}/>
+        <Route path='/expertise/business-intelligence' element={<BusinessIntelligence/>}/>
+        <Route path='/expertise/cloud-solutions' element={<CloudSolutions/>}/>
+        <Route path='/expertise/cyber-security' element={<CyberSecurity/>}/>
+        <Route path='/expertise/it-strategy' element={<ITStrategy/>}/>
+        <Route path='/contact' element={<ContactSection/>}/>
+        <Route path='/expertise/product-management' element={<ProductManagementStrategy/>}/>
       </Routes>
       <Footersection />
     </Router>

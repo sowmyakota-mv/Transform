@@ -87,18 +87,21 @@ const CommunityImpact: React.FC = () => {
   ];
 
   return (
-    <section id="impact" className="bg-gradient-to-b from-white to-blue-50 py-24 px-8 md:px-20">
-      {/* Hero Section */}
-      <ScrollAnimation delay={100}>
-        <div className="text-center max-w-5xl mx-auto mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 animate-fade-up">
-            Shaping a Responsible Digital Future
-          </h2>
-          <p className="text-lg text-gray-700 animate-fade-up delay-200">
-            We see community impact not as a side project, but as a shared mission. Through technology, empathy, and innovation, Transform is redefining how businesses create real-world change — sustainably, inclusively, and collaboratively.
-          </p>
-        </div>
-      </ScrollAnimation>
+    <section
+  id="impact"
+  className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 py-32 px-8 md:px-20 text-white -mb-16"
+>
+  {/* Hero Section */}
+  <ScrollAnimation delay={100}>
+    <div className="text-center max-w-5xl mx-auto mb-20">
+      <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-up">
+        Shaping a Responsible Digital Future
+      </h2>
+      <p className="text-lg animate-fade-up delay-200">
+        We see community impact not as a side project, but as a shared mission. Through technology, empathy, and innovation, Transform is redefining how businesses create real-world change — sustainably, inclusively, and collaboratively.
+      </p>
+    </div>
+  </ScrollAnimation>
 
       {/* Impact Sections */}
       <div className="space-y-12">

@@ -22,7 +22,7 @@ const RegisterCTA: React.FC = () => {
             Dive into immersive experiences, cutting-edge solutions, and interactive demonstrations designed to elevate your digital strategy. Let’s create something extraordinary together.
           </p>
           <a
-            href="/join-experience"
+            href="/contact" 
             className="inline-block px-8 py-4 rounded-lg bg-white text-blue-700 font-bold text-lg hover:bg-gray-100 transition"
           >
             Begin Your Experience

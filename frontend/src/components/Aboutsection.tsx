@@ -1,7 +1,9 @@
 import React, { useRef, useEffect, useState } from "react";
 import aboutImage from "/aboutImg.png";
+import { useNavigate } from "react-router-dom";
 
 const Aboutsection: React.FC = () => {
+  const navigate=useNavigate()
   // Refs for each element
   const imageRef = useRef<HTMLDivElement>(null);
   const h2Ref = useRef<HTMLParagraphElement>(null);
@@ -103,11 +105,11 @@ const Aboutsection: React.FC = () => {
     collaboratively from vision to execution so that transformation
     sticks.
     <br />
-    <button
+    <button onClick={()=>navigate("/abouttransform")}
       className="mt-4 inline-flex items-center space-x-2 px-4 py-2 text-orange-500 font-semibold transition-all duration-300
       rounded-lg hover:bg-orange-500 hover:text-white hover:shadow-md hover:border hover:border-orange-500"
     >
-      <span>Learn More</span>
+      <span >Learn More</span>
       <span className="text-xl">&rarr;</span>
     </button>
   </div>

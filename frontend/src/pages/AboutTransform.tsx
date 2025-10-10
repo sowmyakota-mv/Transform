@@ -1,8 +1,10 @@
 // src/pages/AboutTransform.tsx
 import React from "react";
 import ScrollAnimation from "../animation/ScrollAnimation";
+import { useNavigate } from "react-router-dom";
 
 const AboutTransform: React.FC = () => {
+  const navigate=useNavigate()
   return (
     <div id="abouttransform" className="bg-white text-gray-900">
 
@@ -247,7 +249,7 @@ const AboutTransform: React.FC = () => {
           </p>
         </ScrollAnimation>
         <ScrollAnimation delay={300}>
-          <button className="bg-white text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+          <button onClick={()=>navigate("/contact")} className="bg-white text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
             Let’s Build Forward
           </button>
         </ScrollAnimation>

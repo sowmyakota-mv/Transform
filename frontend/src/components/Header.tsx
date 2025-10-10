@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 interface NavItem {
@@ -19,7 +19,22 @@ const navLinks: NavItem[] = [
       { title: "Community Impact", href: "/impact" },
     ],
   },
-  { title: "Expertise", href: "/expertise" },
+  {
+    title: "Expertise",
+    submenu: [
+  { title: "Digital Transformation", href: "/expertise/digital-transformation" },
+  { title: "Data, AI & Analytics", href: "/expertise/data-analytics" },
+  { title: "Business Intelligence", href: "/expertise/business-intelligence" },
+  { title: "Cloud Solutions", href: "/expertise/cloud-solutions" },
+  { title: "Technology & Platform Engineering", href: "/expertise/platform-engineering" },
+  { title: "UX & Design Innovation", href: "/expertise/ux-design" },
+  { title: "People & Change Capability", href: "/expertise/people-change" },
+  { title: "Sustainability & ESG", href: "/expertise/sustainability" },
+  { title: "IT Strategy & Consulting", href: "/expertise/it-strategy" },
+  { title: "Cyber Security & Networking", href: "/expertise/cyber-security" },
+  { title: "Product Management & Strategy", href: "/expertise/product-management" },
+],
+  },
   { title: "Contact", href: "/contact" },
 ];
 
@@ -27,6 +42,7 @@ const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate=useNavigate()
   const location = useLocation();
 
   useEffect(() => {
@@ -49,70 +65,85 @@ const Header: React.FC = () => {
       >
         <div className="relative max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
           {/* Logo */}
-          <div className="text-3xl font-bold text-orange-900">Transform</div>
+<div className="flex items-center">
+  <img
+    src="/logo.png" 
+    alt="InnovicSolutions Logo"
+    className="w-48 h-12 object-contain"
+  />
+  <span className="text-2xl md:text-4xl font-extrabold text-orange-900 -ml-10">
+    InnovicSolutions
+  </span>
+</div>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex justify-center space-x-8 relative">
-            {navLinks.map((link) => {
-              const isActive = location.pathname === link.href;
-              return link.submenu ? (
-                <div
-                  key={link.title}
-                  className="relative"
-                >
-                  <button
-                    type="button"
-                    onClick={() =>
-                      setOpenDropdown(
-                        openDropdown === link.title ? null : link.title
-                      )
-                    }
-                    className={`font-medium ${
-                      isActive
-                        ? "text-purple-700 border-b-2 border-purple-700"
-                        : "text-orange-900 hover:underline"
-                    }`}
-                  >
-                    {link.title}
-                  </button>
+           {navLinks.map((link) => {
+  // Check if top-level link is active or any of its submenu items match the current pathname
+  const isActive =
+    link.href === location.pathname ||
+    (link.submenu && link.submenu.some((item) => item.href === location.pathname));
 
-                  {/* Dropdown */}
-                  {openDropdown === link.title && (
-                    <div
-                      className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2 z-50"
-                      onMouseLeave={() => setOpenDropdown(null)}
-                    >
-                      {link.submenu.map((item) => (
-                        <Link
-                          key={item.title}
-                          to={item.href}
-                          className="block px-4 py-2 text-sm text-orange-900 hover:bg-gray-100"
-                        >
-                          {item.title}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  key={link.title}
-                  to={link.href || "/"}
-                  className={`font-medium ${
-                    isActive
-                      ? "text-purple-700 border-b-2 border-purple-700"
-                      : "text-orange-900 hover:underline"
-                  }`}
-                >
-                  {link.title}
-                </Link>
-              );
-            })}
+  return link.submenu ? (
+    <div key={link.title} className="relative">
+      <button
+        type="button"
+        onClick={() =>
+          setOpenDropdown(openDropdown === link.title ? null : link.title)
+        }
+        className={`font-medium ${
+          isActive
+            ? "text-purple-700 border-b-2 border-purple-700"
+            : "text-orange-900 hover:underline"
+        }`}
+      >
+        {link.title}
+      </button>
+
+      {/* Dropdown */}
+      {openDropdown === link.title && (
+        <div
+          className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg py-2 z-50"
+          onMouseLeave={() => setOpenDropdown(null)}
+        >
+          {link.submenu.map((item) => {
+            const isSubActive = item.href === location.pathname;
+            return (
+              <Link
+                key={item.title}
+                to={item.href}
+                className={`block px-4 py-2 text-sm ${
+                  isSubActive
+                    ? "text-purple-700 font-semibold"
+                    : "text-orange-900 hover:bg-gray-100"
+                }`}
+              >
+                {item.title}
+              </Link>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  ) : (
+    <Link
+      key={link.title}
+      to={link.href || "/"}
+      className={`font-medium ${
+        isActive
+          ? "text-purple-700 border-b-2 border-purple-700"
+          : "text-orange-900 hover:underline"
+      }`}
+    >
+      {link.title}
+    </Link>
+  );
+})}
           </nav>
 
           {/* Desktop Register */}
           <div className="hidden md:flex">
-            <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg">
+            <button onClick={()=>navigate("/contact")} className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg">
               Register
             </button>
           </div>
@@ -178,8 +209,8 @@ const Header: React.FC = () => {
           <div
             className="hidden md:block fixed left-0 right-0 z-40"
             style={{
-              top: "calc(5rem + 24px)",
-              height: "4px",
+              top: "calc(5rem + 32px)",
+              height: "5px",
               background: "linear-gradient(to right, #C4D7EF)",
               opacity: 0.4,
             }}

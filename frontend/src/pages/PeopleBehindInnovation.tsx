@@ -3,12 +3,6 @@ import React, { useEffect, useState } from "react";
 import ScrollAnimation from "../animation/ScrollAnimation";
 
 const PeopleBehindInnovation: React.FC = () => {
-  const team = Array.from({ length: 19 }).map((_, i) => ({
-    name: `Team Member ${i + 1}`,
-    role: "Role Placeholder",
-    image: "/team.jpg", // single placeholder in public folder
-  }));
-
   const voices = [
     {
       quote: "Innovation is not about technology alone — it’s about people who care enough to reimagine what’s possible.",
@@ -35,59 +29,104 @@ const PeopleBehindInnovation: React.FC = () => {
 
   return (
     <section className="bg-gradient-to-b from-white to-blue-50 py-24 px-6 sm:px-10 md:px-24">
+      {/* Hero Section */}
       <ScrollAnimation delay={100} once threshold={0.1}>
         <div className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             The People Behind Innovation
           </h2>
           <p className="text-lg text-gray-700">
-            Transform’s team has worked with some of the UK’s biggest organisations, providing a wealth of experience and knowledge.
+            At Transform, innovation thrives through a culture of curiosity, collaboration, and impact. Our team leverages expertise & experience to help organisations transform, grow, & make a meaningful difference in their industries.
+          </p>
+          <p className="mt-4 text-lg text-gray-700">
+            While we celebrate individual excellence, it’s our collective spirit, culture, and dedication that drive true innovation. Explore the principles that guide our work and the values that define us.
           </p>
         </div>
       </ScrollAnimation>
 
+      {/* Culture & Values Section */}
       <ScrollAnimation delay={200} once threshold={0.1}>
         <div className="max-w-5xl mx-auto mb-20">
-          <h3 className="text-2xl font-semibold text-purple-700 mb-4">What Defines Our Team</h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>Collaboration over hierarchy — every idea counts.</li>
-            <li>Innovation driven by empathy and insight.</li>
-            <li>Transparency and trust as our cultural foundation.</li>
-            <li>Commitment to sustainability and social value.</li>
-            <li>Continuous learning through experimentation and curiosity.</li>
-          </ul>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-semibold text-purple-700 mb-6">Our Culture & Values</h3>
+              <p className="text-gray-700 mb-4">
+                We believe that a strong, inclusive culture is the cornerstone of innovation. Our values are reflected in the way we collaborate, make decisions, and approach challenges.
+              </p>
+              <ul className="list-disc list-inside text-gray-700 space-y-2">
+                <li>Collaboration over hierarchy — every voice matters.</li>
+                <li>Empathy-driven innovation to meet real-world needs.</li>
+                <li>Transparency and integrity in all our projects.</li>
+                <li>Commitment to sustainability and social value.</li>
+                <li>Continuous learning and curiosity fuel experimentation.</li>
+              </ul>
+            </div>
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+                alt="Our Culture"
+                className="w-full rounded-2xl shadow-lg object-cover h-80 sm:h-96"
+              />
+            </div>
+          </div>
         </div>
       </ScrollAnimation>
 
-      <div className="max-w-6xl mx-auto mb-16">
-        <ScrollAnimation delay={250} once threshold={0.05}>
-          <h3 className="text-3xl font-bold text-purple-800 mb-10 text-center">
-            Meet Our Leadership Team
-          </h3>
-        </ScrollAnimation>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {team.map((member, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500"
-            >
-              <img
-                src={member.image}
-                alt={member.name}
-                loading="lazy"
-                className="w-full h-56 sm:h-60 object-cover"
-              />
-              <div className="p-5 text-center">
-                <h4 className="text-lg font-semibold text-gray-900">{member.name}</h4>
-                <p className="text-sm text-purple-700 font-medium">{member.role}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* Processes & Expertise Section */}
+<ScrollAnimation delay={250} once threshold={0.1}>
+  <div className="max-w-5xl mx-auto mb-20">
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="order-2 md:order-1">
+        <img
+          src="/momentum.jpg"
+          alt="Processes and Expertise"
+          className="w-full rounded-2xl shadow-lg object-cover h-80 sm:h-96"
+        />
       </div>
+      <div className="order-1 md:order-2">
+        <h3 className="text-3xl font-semibold text-purple-700 mb-6">Our Processes & Expertise</h3>
+        <p className="text-gray-700 mb-4">
+          Our approach combines strategic insight, technical expertise, and agile methodologies to deliver tangible results. Every project follows a structured yet flexible process that encourages experimentation and learning.
+        </p>
+        <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <li>Agile project delivery for rapid, iterative outcomes.</li>
+          <li>Cross-functional collaboration for holistic solutions.</li>
+          <li>Data-driven insights guide all strategic decisions.</li>
+          <li>Human-centred design ensures optimal user experience.</li>
+          <li>Continuous feedback and iteration for excellence.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ScrollAnimation>
 
+      {/* Impact Section */}
       <ScrollAnimation delay={300} once threshold={0.1}>
+        <div className="max-w-5xl mx-auto mb-20 text-left">
+          <h3 className="text-3xl font-semibold text-purple-700 mb-6 text-center">Our Impact</h3>
+          <p className="text-gray-700 mb-4 text-center">
+            Beyond delivering solutions, our goal is to create lasting impact for clients, communities, and industries. We measure success not only in business outcomes but in meaningful change.
+          </p>
+          <div className="flex flex-col items-center space-y-3">
+            <ul className="list-disc list-inside text-gray-700 space-y-2">
+              <li>Helping organisations innovate and stay competitive in evolving markets.</li>
+              <li>Driving sustainable practices and social responsibility initiatives.</li>
+              <li>Empowering teams and clients through knowledge sharing and training.</li>
+              <li>Creating user-centric solutions that transform experiences.</li>
+            </ul>
+          </div>
+          {/* <div className="mt-6">
+            <img
+              src="https://images.unsplash.com/photo-1532074205216-cb9a69259f5e?auto=format&fit=crop&w=800&q=80"
+              alt="Impact"
+              className="w-full rounded-2xl shadow-lg object-cover h-80 sm:h-96"
+            />
+          </div> */}
+        </div>
+      </ScrollAnimation>
+
+      {/* Voices of Innovation */}
+      <ScrollAnimation delay={350} once threshold={0.1}>
         <div className="bg-purple-50 rounded-2xl py-10 px-6 md:px-12 mb-12">
           <h3 className="text-2xl font-semibold text-purple-800 mb-6 text-center">
             Voices of Innovation
