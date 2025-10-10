@@ -63,15 +63,15 @@ const Header: React.FC = () => {
             "linear-gradient(to right, #F13E84, #9D64EF, #5816AE)",
         }}
       >
-        <div className="relative max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+        <div className="relative max-w-7xl mx-auto flex items-center justify-between w-full py-4 px-6">
           {/* Logo */}
-<div className="flex items-center">
+<div className="flex items-centerspace-x-2">
   <img
     src="/logo.png" 
     alt="InnovicSolutions Logo"
-    className="w-24 h-12 object-contain"
+    className="w-24 h-12 object-contain sm:w-32 sm:h-14"
   />
-  <span className="text-2xl md:text-4xl font-extrabold text-orange-900">
+  <span className="text-2xl md:text-4xl sm:text-2xl font-extrabold text-orange-900 mt-2">
     InnovicSolutions
   </span>
 </div>
