@@ -3,6 +3,7 @@ import React from "react";
 import ScrollAnimation from "../animation/ScrollAnimation";
 import { Link } from "react-router-dom";
 import { Cpu, Database, BarChart } from "lucide-react";
+import { FaCheckSquare } from "react-icons/fa";
 
 const servicesData = [
   {
@@ -27,7 +28,7 @@ const servicesData = [
 
 const DataAIAnalytics: React.FC = () => {
   return (
-    <section className="bg-slate-50 py-20 md:py-28">
+    <section className="bg-slate-50 py-20 md:py-36 -mb-32">
       {/* Hero Section */}
       <ScrollAnimation delay={100}>
         <div className="max-w-7xl mx-auto text-center px-6 md:px-20 mb-20">
@@ -46,7 +47,6 @@ const DataAIAnalytics: React.FC = () => {
         </div>
       </ScrollAnimation>
 
-      {/* What Is Section - Image in Center */}
       {/* What Is Section - Image in Center */}
 <div className="max-w-6xl mx-auto px-6 md:px-20 mb-24">
   <ScrollAnimation delay={200}>
@@ -93,12 +93,18 @@ const DataAIAnalytics: React.FC = () => {
           <ScrollAnimation delay={250}>
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-6">Who Uses It?</h2>
-              <ul className="list-disc pl-6 space-y-2 text-slate-700">
-                <li>Enterprises: Streamline operations and drive innovation.</li>
-                <li>SMBs: Understand customer behavior and optimize marketing.</li>
-                <li>Governments: Improve public services and optimize resources.</li>
-                <li>Healthcare Providers: Enhance diagnosis, treatment, and efficiency.</li>
-                <li>Educational Institutions: Track performance and optimize curricula.</li>
+              <ul className="list-none pl-6 space-y-2 text-slate-700">
+                {["Enterprises: Streamline operations and drive innovation.",
+                "SMBs: Understand customer behavior and optimize marketing.",
+                "Governments: Improve public services and optimize resources.",
+                "Healthcare Providers: Enhance diagnosis, treatment, and efficiency.",
+                "Educational Institutions: Track performance and optimize curricula.",
+                ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <FaCheckSquare className="text-green-600 mt-1 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
               </ul>
             </div>
           </ScrollAnimation>
@@ -106,11 +112,17 @@ const DataAIAnalytics: React.FC = () => {
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-6">Why It Matters</h2>
               <ul className="list-disc pl-6 space-y-2 text-slate-700">
-                <li>Informed Decision-Making: Real-time insights for better strategies.</li>
-                <li>Operational Efficiency: Automation reduces cost and effort.</li>
-                <li>Competitive Advantage: Stay ahead with predictive analytics.</li>
-                <li>Customer Satisfaction: Personalization and better experiences.</li>
-                <li>Risk Management: Identify and mitigate potential risks proactively.</li>
+                {["Informed Decision-Making: Real-time insights for better strategies.",
+                "Operational Efficiency: Automation reduces cost and effort.",
+                "Competitive Advantage: Stay ahead with predictive analytics.",
+                "Customer Satisfaction: Personalization and better experiences.",
+                "Risk Management: Identify and mitigate potential risks proactively.",
+                ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <FaCheckSquare className="text-green-600 mt-1 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
               </ul>
             </div>
           </ScrollAnimation>
@@ -144,8 +156,8 @@ const DataAIAnalytics: React.FC = () => {
 
       {/* Benefits Section */}
       <div className="bg-cyan-600 py-20 text-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-20 text-center">
-          <h2 className="text-3xl font-bold mb-8">Key Benefits</h2>
+        <div className="max-w-6xl mx-auto px-6 md:px-20 text-center">
+          <h2 className="text-3xl font-bold mb-8">Benefits of Data, AI & Analytics</h2>
           <div className="grid md:grid-cols-3 gap-8 text-left">
             <div className="bg-cyan-500/20 rounded-2xl p-6">
               <h3 className="text-xl font-semibold mb-2">Enhanced Decision-Making</h3>

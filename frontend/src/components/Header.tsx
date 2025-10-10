@@ -65,14 +65,14 @@ const Header: React.FC = () => {
       >
         <div className="relative max-w-7xl mx-auto flex items-center justify-between w-full py-4 px-6">
           {/* Logo */}
-<div className="flex items-centerspace-x-2">
+<div className="flex items-center -space-x-2 min-w-0">
   <img
     src="/logo.png" 
     alt="InnovicSolutions Logo"
-    className="w-24 h-12 object-contain sm:w-14 sm:h-14"
+    className="w-24 h-12 sm:w-28 sm:h-14 object-contain -ml-8"
   />
-  <span className="text-2xl md:text-4xl sm:text-2xl font-extrabold text-orange-900 mt-2">
-    InnovicSolution
+  <span className="text-2xl md:text-4xl font-extrabold text-orange-900 ">
+    InnovicSolutions
   </span>
 </div>
 
@@ -149,7 +149,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Mobile Hamburger */}
-          <div className="absolute right-6 md:hidden">
+          <div className="absolute right-6 md:hidden flex-shrink-0">
             <button onClick={() => setMenuOpen(!menuOpen)}>
               {menuOpen ? (
                 <X className="text-orange-900 w-7 h-7" />
@@ -209,7 +209,7 @@ const Header: React.FC = () => {
           <div
             className="hidden md:block fixed left-0 right-0 z-40"
             style={{
-              top: "calc(5rem + 32px)",
+              top: "calc(5rem + 40px)",
               height: "5px",
               background: "linear-gradient(to right, #C4D7EF)",
               opacity: 0.4,
@@ -219,8 +219,8 @@ const Header: React.FC = () => {
           <div
             className="block md:hidden fixed left-0 right-0 z-40"
             style={{
-              top: "100px",
-              height: "4px",
+              top: "112px",
+              height: "5px",
               background: "linear-gradient(to right, #C4D7EF)",
               opacity: 0.4,
             }}

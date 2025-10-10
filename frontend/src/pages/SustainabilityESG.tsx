@@ -1,6 +1,7 @@
 // src/components/SustainabilityESG.tsx
 import React from "react";
 import ScrollAnimation from "../animation/ScrollAnimation";
+import { FaCheckSquare } from "react-icons/fa";
 
 const esgServicesData = [
   {
@@ -42,7 +43,7 @@ By embedding ESG considerations into data analytics, they enable clients to:`,
 
 const SustainabilityESG: React.FC = () => {
   return (
-    <section className="bg-gray-50 text-gray-900 py-24">
+    <section className="bg-gray-50 text-gray-900 py-28">
       <div className="max-w-7xl mx-auto px-6 md:px-20">
         <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-12">
           Sustainability & ESG Services
@@ -68,11 +69,20 @@ const SustainabilityESG: React.FC = () => {
                     {service.title}
                   </h2>
                   <p className="text-gray-700 mb-4">{service.desc}</p>
-                  <ul className="list-disc list-inside space-y-2 text-gray-700">
-                    {service.points.map((point, i) => (
-                      <li key={i}>{point}</li>
-                    ))}
-                  </ul>
+                  <ul className="list-none space-y-2 text-gray-700">
+  {service.points.map((point, i) => {
+    const [title, ...rest] = point.split(":");
+    return (
+      <li key={i} className="flex items-start gap-2">
+        <FaCheckSquare className="mt-1 text-green-600 flex-shrink-0" />
+        <span>
+          <span className="font-bold">{title}:</span> {rest.join(":").trim()}
+        </span>
+      </li>
+    );
+  })}
+</ul>
+
                 </div>
               </div>
             </ScrollAnimation>

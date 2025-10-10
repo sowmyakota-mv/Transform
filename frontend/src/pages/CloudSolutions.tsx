@@ -3,6 +3,7 @@ import React from "react";
 import ScrollAnimation from "../animation/ScrollAnimation";
 import {  Lock, Server, Settings, CloudUpload } from "lucide-react";
 import { Link } from "react-router-dom";
+import { FaCheckSquare } from "react-icons/fa";
 
 const servicesData = [
   {
@@ -36,10 +37,10 @@ const CloudSolutions: React.FC = () => {
     <section className="bg-gray-50 text-gray-900">
       {/* Hero Section */}
       <ScrollAnimation delay={100}>
-        <div className="max-w-7xl mx-auto px-6 md:px-20 py-20 text-center">
+        <div className="max-w-7xl mx-auto px-6 md:px-20 py-36 text-center -mb-16">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
             Empower Your Business with{" "}
-            <span className="text-indigo-600">Cloud Solutions</span>
+            <span className="text-blue-500">Cloud Solutions</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mb-8">
             Accelerate your digital transformation journey with scalable,
@@ -49,7 +50,7 @@ const CloudSolutions: React.FC = () => {
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-indigo-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-indigo-700 transition"
+            className="inline-block bg-blue-500 text-white font-semibold py-3 px-6 rounded-full hover:bg-indigo-700 transition"
           >
             Get Started
           </Link>
@@ -117,39 +118,62 @@ const CloudSolutions: React.FC = () => {
       </div>
 
       {/* Who Uses & Why Section */}
-      <div className="max-w-7xl mx-auto px-6 md:px-20 py-20 grid md:grid-cols-2 gap-16 items-center">
-        <ScrollAnimation delay={250}>
-          <div>
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
-              Who Uses Cloud Solutions?
-            </h2>
-            <ul className="list-disc pl-6 space-y-3 text-gray-700">
-              <li>Startups and SMEs seeking affordable and scalable IT setups.</li>
-              <li>Enterprises modernizing legacy systems for agility.</li>
-              <li>Healthcare, finance, and retail industries prioritizing data security and compliance.</li>
-              <li>Software companies deploying SaaS and DevOps pipelines.</li>
-              <li>Government and educational bodies shifting to cloud-first strategies.</li>
-            </ul>
-          </div>
-        </ScrollAnimation>
-        <ScrollAnimation delay={300}>
-          <div>
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
-              Why It Matters
-            </h2>
-            <ul className="list-disc pl-6 space-y-3 text-gray-700">
-              <li><b>Scalability:</b> Adjust infrastructure to meet fluctuating demands.</li>
-              <li><b>Cost Efficiency:</b> Pay-as-you-go models eliminate heavy upfront investments.</li>
-              <li><b>Innovation:</b> Accelerate digital transformation and time-to-market.</li>
-              <li><b>Business Continuity:</b> Secure, redundant, and disaster-recovery-ready environments.</li>
-              <li><b>Global Access:</b> Enable collaboration anytime, anywhere with consistent performance.</li>
-            </ul>
-          </div>
-        </ScrollAnimation>
-      </div>
+<div className="max-w-7xl mx-auto px-6 md:px-20 py-20 grid md:grid-cols-2 gap-16 items-center">
+  <ScrollAnimation delay={250}>
+    <div>
+      <h2 className="text-3xl font-bold text-slate-900 mb-6">
+        Who Uses Cloud Solutions?
+      </h2>
+      <ul className="list-none space-y-3 text-gray-700">
+        {[
+          "Startups and SMEs: seeking affordable and scalable IT setups.",
+          "Enterprises: modernizing legacy systems for agility.",
+          "Healthcare, finance, and retail: prioritizing data security and compliance.",
+          "Software companies: deploying SaaS and DevOps pipelines.",
+          "Government and educational bodies: shifting to cloud-first strategies.",
+        ].map((item, index) => {
+          const [title, ...rest] = item.split(":");
+          return (
+            <li key={index} className="flex items-start gap-2">
+              <FaCheckSquare className="mt-1 text-indigo-600 flex-shrink-0" />
+              <span>
+                <span className="font-bold">{title}:</span> {rest.join(":").trim()}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </ScrollAnimation>
+
+  <ScrollAnimation delay={300}>
+    <div>
+      <h2 className="text-3xl font-bold text-slate-900 mb-6">Why It Matters</h2>
+      <ul className="list-none space-y-3 text-gray-700">
+        {[
+          "Scalability: Adjust infrastructure to meet fluctuating demands.",
+          "Cost Efficiency: Pay-as-you-go models eliminate heavy upfront investments.",
+          "Innovation: Accelerate digital transformation and time-to-market.",
+          "Business Continuity: Secure, redundant, and disaster-recovery-ready environments.",
+          "Global Access: Enable collaboration anytime, anywhere with consistent performance.",
+        ].map((item, index) => {
+          const [title, ...rest] = item.split(":");
+          return (
+            <li key={index} className="flex items-start gap-2">
+              <FaCheckSquare className="mt-1 text-indigo-600 flex-shrink-0" />
+              <span>
+                <span className="font-bold">{title}:</span> {rest.join(":").trim()}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </ScrollAnimation>
+</div>
 
       {/* Services Section */}
-      <div className="max-w-7xl mx-auto px-6 md:px-20 py-20">
+      <div className="max-w-5xl mx-auto px-6 md:px-20 py-20">
         <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
           Our Cloud Services
         </h2>
@@ -176,20 +200,20 @@ const CloudSolutions: React.FC = () => {
       </div>
 
       {/* Benefits Section */}
-      <div className="bg-indigo-600 py-20 text-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-20 text-center">
+      <div className="bg-blue-500 py-20 text-white">
+        <div className="max-w-6xl mx-auto px-6 md:px-20 text-center">
           <h2 className="text-3xl font-bold mb-10">
             Key Benefits of Cloud Solutions
           </h2>
           <div className="grid md:grid-cols-3 gap-8 text-left">
-            <div className="bg-indigo-500/20 rounded-2xl p-6">
+            <div className="bg-blue-700/20 rounded-2xl p-6">
               <h3 className="text-xl font-semibold mb-2">Scalability</h3>
               <p>
                 Expand or reduce computing resources on demand without service
                 interruption or downtime.
               </p>
             </div>
-            <div className="bg-indigo-500/20 rounded-2xl p-6">
+            <div className="bg-blue-700/20 rounded-2xl p-6">
               <h3 className="text-xl font-semibold mb-2">
                 Security & Compliance
               </h3>
@@ -198,7 +222,7 @@ const CloudSolutions: React.FC = () => {
                 multi-layer authentication.
               </p>
             </div>
-            <div className="bg-indigo-500/20 rounded-2xl p-6">
+            <div className="bg-blue-700/20 rounded-2xl p-6">
               <h3 className="text-xl font-semibold mb-2">
                 Innovation Enablement
               </h3>

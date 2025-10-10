@@ -1,6 +1,7 @@
 // src/pages/CommunityImpact.tsx
 import React from "react";
 import ScrollAnimation from "../animation/ScrollAnimation";
+import { FaCheckSquare } from "react-icons/fa";
 
 const CommunityImpact: React.FC = () => {
   const impactSections = [
@@ -89,7 +90,7 @@ const CommunityImpact: React.FC = () => {
   return (
     <section
   id="impact"
-  className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 py-32 px-8 md:px-20 text-white -mb-16"
+  className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 py-36 px-8 md:px-20 text-white -mb-16"
 >
   {/* Hero Section */}
   <ScrollAnimation delay={100}>
@@ -124,9 +125,10 @@ const CommunityImpact: React.FC = () => {
                     {para}
                   </p>
                 ))}
-                <ul className="list-disc list-inside text-gray-700 space-y-2 mt-4">
+                <ul className="list-inside text-gray-700 space-y-2 mt-4">
                   {section.points.map((point, j) => (
-                    <li key={j}>{point}</li>
+                    <li key={j} className="flex items-start gap-2"><FaCheckSquare className="text-green-600 mt-1 flex-shrink-0" />
+                    <span>{point}</span></li>
                   ))}
                 </ul>
               </div>

@@ -3,6 +3,7 @@ import React from "react";
 import ScrollAnimation from "../animation/ScrollAnimation";
 import { Link } from "react-router-dom";
 import {  Lightbulb, Monitor, Users, PenTool, Code } from "lucide-react";
+import { FaCheckSquare } from "react-icons/fa";
 
 const servicesData = [
   {
@@ -100,57 +101,65 @@ const UXDesign: React.FC = () => {
       </div>
 
       {/* Who & Why Section */}
-      <div className="bg-gradient-to-r from-pink-50 to-white py-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-20 grid md:grid-cols-2 gap-12 items-center">
-          <ScrollAnimation delay={250}>
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Who Benefits from UX & Design Innovation?
-              </h2>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>Businesses aiming to improve product adoption and loyalty.</li>
-                <li>Startups creating intuitive digital experiences.</li>
-                <li>Organizations transforming legacy interfaces into modern UX.</li>
-                <li>Product and marketing teams focusing on engagement.</li>
-                <li>Development teams integrating design into apps and platforms.</li>
-              </ul>
-            </div>
-          </ScrollAnimation>
-
-          <ScrollAnimation delay={300}>
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Why UX & Design Innovation Matters
-              </h2>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>
-                  <b>Boost Engagement:</b> Design experiences that users love
-                  interacting with.
-                </li>
-                <li>
-                  <b>Reduce Friction:</b> Streamline journeys with intuitive
-                  design patterns.
-                </li>
-                <li>
-                  <b>Enhance Brand Perception:</b> Build trust and recognition
-                  through consistent design.
-                </li>
-                <li>
-                  <b>Drive Conversions:</b> Align UX with business outcomes and
-                  user goals.
-                </li>
-                <li>
-                  <b>Foster Innovation:</b> Encourage experimentation and
-                  creative problem-solving, bridging design with application development.
-                </li>
-              </ul>
-            </div>
-          </ScrollAnimation>
-        </div>
+<div className="bg-gradient-to-r from-pink-50 to-white py-20">
+  <div className="max-w-7xl mx-auto px-6 md:px-20 grid md:grid-cols-2 gap-12 items-center">
+    <ScrollAnimation delay={250}>
+      <div>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Who Benefits from UX & Design Innovation?
+        </h2>
+        <ul className="list-none space-y-2 text-gray-700">
+          {[
+            "Businesses: aiming to improve product adoption and loyalty.",
+            "Startups: creating intuitive digital experiences.",
+            "Organizations: transforming legacy interfaces into modern UX.",
+            "Product & marketing teams: focusing on engagement.",
+            "Development teams: integrating design into apps and platforms."
+          ].map((item, index) => {
+            const [title, ...rest] = item.split(":");
+            return (
+              <li key={index} className="flex items-start gap-2">
+                <FaCheckSquare className="mt-1 text-pink-600 flex-shrink-0" />
+                <span>
+                  <span className="font-bold">{title}:</span> {rest.join(":").trim()}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
       </div>
+    </ScrollAnimation>
+    <ScrollAnimation delay={300}>
+      <div>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Why UX & Design Innovation Matters
+        </h2>
+        <ul className="list-none space-y-2 text-gray-700">
+          {[
+            "Boost Engagement: Design experiences that users love interacting with.",
+            "Reduce Friction: Streamline journeys with intuitive design patterns.",
+            "Enhance Brand Perception: Build trust and recognition through consistent design.",
+            "Drive Conversions: Align UX with business outcomes and user goals.",
+            "Foster Innovation: Encourage experimentation and creative problem-solving."
+          ].map((item, index) => {
+            const [title, ...rest] = item.split(":");
+            return (
+              <li key={index} className="flex items-start gap-2">
+                <FaCheckSquare className="mt-1 text-pink-600 flex-shrink-0" />
+                <span>
+                  <span className="font-bold">{title}:</span> {rest.join(":").trim()}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </ScrollAnimation>
+  </div>
+</div>
 
       {/* Services Section */}
-      <div className="max-w-7xl mx-auto px-6 md:px-20 py-20">
+      <div className="max-w-5xl mx-auto px-6 md:px-20 py-20">
         <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
           Our UX & Design Innovation Services
         </h2>
@@ -178,7 +187,7 @@ const UXDesign: React.FC = () => {
 
       {/* Benefits Section */}
       <div className="bg-pink-600 py-20 text-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-20 text-center">
+        <div className="max-w-6xl mx-auto px-6 md:px-20 text-center">
           <h2 className="text-3xl font-bold mb-10">
             Key Benefits of UX & Design Innovation
           </h2>

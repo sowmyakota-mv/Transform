@@ -1,6 +1,7 @@
 // src/components/ProductManagementStrategy.tsx
 import React from "react";
 import ScrollAnimation from "../animation/ScrollAnimation";
+import { FaCheckSquare } from "react-icons/fa";
 
 const productServicesData = [
   {
@@ -62,7 +63,7 @@ const productServicesData = [
 
 const ProductManagementStrategy: React.FC = () => {
   return (
-    <section className="bg-gradient-to-b from-gray-50 via-white to-gray-50 text-gray-900 py-24">
+    <section className="bg-gradient-to-b from-gray-50 via-white to-gray-50 text-gray-900 py-28">
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         <h1 className="text-5xl md:text-6xl font-extrabold text-center mb-24">
           Product Management & Strategy
@@ -82,25 +83,37 @@ const ProductManagementStrategy: React.FC = () => {
               </div>
 
               {/* Image and highlights */}
-              <div className="relative flex flex-col items-center">
-                <div className="rounded-3xl overflow-hidden shadow-xl w-full max-w-5xl">
-                  <img
-                    src={service.img}
-                    alt={service.title}
-                    className="w-full h-[420px] object-cover rounded-3xl transform transition-transform duration-700 hover:scale-105"
-                  />
-                </div>
+<div className="relative flex flex-col items-center">
+  <div className="rounded-3xl overflow-hidden shadow-xl w-full max-w-3xl"> {/* reduced from max-w-5xl */}
+    <img
+      src={service.img}
+      alt={service.title}
+      className="w-full h-[420px] object-cover rounded-3xl transform transition-transform duration-700 hover:scale-105"
+    />
+  </div>
 
-                <div className="bg-white shadow-lg rounded-3xl mt-[-60px] p-8 md:p-10 max-w-4xl mx-auto relative z-10">
-                  <ul className="list-disc list-inside space-y-2 text-gray-700">
-                    {service.points.map((point, i) => (
-                      <li key={i} className="text-base md:text-lg">
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+  <div className="bg-white shadow-lg rounded-3xl mt-[-60px] p-8 md:p-10 max-w-3xl mx-auto relative z-10">
+    <ul className="list-none space-y-2 text-gray-700">
+      {service.points.map((point, i) => {
+        const [title, ...rest] = point.split(":");
+        return (
+          <li key={i} className="flex items-start gap-2 text-base md:text-lg">
+            <FaCheckSquare className="mt-1 text-blue-600 flex-shrink-0" />
+            <span>
+              {rest.length > 0 ? (
+                <>
+                  <span className="font-bold">{title}:</span> {rest.join(":").trim()}
+                </>
+              ) : (
+                point
+              )}
+            </span>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</div>
             </div>
           </ScrollAnimation>
         ))}

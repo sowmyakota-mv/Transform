@@ -2,12 +2,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ScrollAnimation from "../animation/ScrollAnimation";
+import { FaCheckSquare } from "react-icons/fa";
 
 const DigitalTransformation: React.FC = () => {
   return (
     <section
       id="/expertise/digital-transformation"
-      className="bg-gradient-to-b from-white via-slate-50 to-slate-100 py-20 md:py-28"
+      className="bg-gradient-to-b from-white via-slate-50 to-slate-100 py-28 md:py-36"
     >
       {/* Hero Section */}
 <ScrollAnimation delay={100}>
@@ -59,19 +60,26 @@ const DigitalTransformation: React.FC = () => {
 
     <ScrollAnimation delay={250}>
       <div>
-        <h2 className="text-2xl font-semibold text-slate-900 mb-3">
+        <h2 className="text-3xl font-bold text-slate-900 mb-3">
           Transforming Strategy into Impact
         </h2>
         <p className="text-slate-700 leading-relaxed">
-          <span className="text-cyan-600 font-semibold">Digital transformation</span> is more than technology — it’s about embedding innovation into every level of your organization. We blend strategy, data, and engineering to modernize operations and deliver tangible results.
+          <span className="text-cyan-600 font-bold">Digital transformation</span> is more than technology — it’s about embedding innovation into every level of your organization. We blend strategy, data, and engineering to modernize operations and deliver tangible results.
         </p>
-        <ul className="list-disc pl-6 mt-4 text-slate-700 space-y-2">
-          <li>Empowers smarter decision-making through analytics</li>
-          <li>Accelerates innovation and time-to-market</li>
-          <li>Builds resilience with scalable digital platforms</li>
-          <li>Aligns technology with long-term business vision</li>
-          <li>Drives cross-department collaboration and agility</li>
-        </ul>
+        <ul className="list-none mt-4 space-y-2 text-slate-700">
+  {[
+    "Empowers smarter decision-making through analytics",
+    "Accelerates innovation and time-to-market",
+    "Builds resilience with scalable digital platforms",
+    "Aligns technology with long-term business vision",
+    "Drives cross-department collaboration and agility",
+  ].map((item, index) => (
+    <li key={index} className="flex items-start gap-2">
+      <FaCheckSquare className="text-green-600 mt-1 flex-shrink-0" />
+      <span>{item}</span>
+    </li>
+  ))}
+</ul>
       </div>
     </ScrollAnimation>
   </div>
@@ -79,7 +87,7 @@ const DigitalTransformation: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <ScrollAnimation delay={300}>
             <div className="order-2 md:order-1">
-              <h2 className="text-2xl font-semibold text-slate-900 mb-3">
+              <h2 className="text-3xl font-bold text-slate-900 mb-3">
                 Why It Matters
               </h2>
               <p className="text-slate-700 leading-relaxed mb-4">
@@ -94,12 +102,18 @@ const DigitalTransformation: React.FC = () => {
                 maintain competitive advantage. It’s no longer an option — it’s a
                 necessity for modern success.
               </p>
-              <ul className="list-disc pl-6 mt-4 text-slate-700 space-y-2">
-                <li>Unlocks new revenue opportunities</li>
-                <li>Improves customer and employee experiences</li>
-                <li>Enhances efficiency through intelligent automation</li>
-                <li>Supports sustainability and reduced operational waste</li>
-                <li>Creates data-driven cultures for better forecasting</li>
+              <ul className="list-none pl-6 mt-4 text-slate-700 space-y-2">
+                {["Unlocks new revenue opportunities",
+                "Improves customer and employee experiences",
+                "Enhances efficiency through intelligent automation",
+                "Supports sustainability and reduced operational waste",
+                "Creates data-driven cultures for better forecasting",
+                ].map((item, index) => (
+    <li key={index} className="flex items-start gap-2">
+      <FaCheckSquare className="text-green-600 mt-1 flex-shrink-0" />
+      <span>{item}</span>
+    </li>
+  ))}
               </ul>
             </div>
           </ScrollAnimation>
@@ -145,7 +159,7 @@ const DigitalTransformation: React.FC = () => {
   {
     title: "Cloud Solutions",
     desc: "Leverage modern cloud-native architectures to build secure, scalable, and efficient digital ecosystems.",
-    img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80",
+    img: "/cloud-migrating.jpg",
     link: "/expertise/cloud-solutions",
   },
   {
@@ -175,7 +189,7 @@ const DigitalTransformation: React.FC = () => {
   {
     title: "Cyber Security & Networking",
     desc: "Protect your digital assets with end-to-end cybersecurity solutions and secure networking.",
-    img: "/security.jpg",
+    img: "/cyber-security.jpg",
     link: "/expertise/cyber-security",
   },
   {

@@ -3,6 +3,7 @@ import React from "react";
 import ScrollAnimation from "../animation/ScrollAnimation";
 import { Link } from "react-router-dom";
 import { Layers, Code, Cloud, Shield } from "lucide-react";
+import { FaCheckSquare } from "react-icons/fa";
 
 const servicesData = [
   {
@@ -15,19 +16,19 @@ const servicesData = [
     title: "DevOps & CI/CD Automation",
     desc: "Automate technology delivery pipelines for faster, more reliable deployments and efficient platform operations.",
     icon: <Code className="w-10 h-10 text-violet-600" />,
-    img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80", // devops workflow
+    img: "/dev.jpg", // devops workflow
   },
   {
     title: "Cloud-Native Technology Solutions",
     desc: "Build, deploy, and manage cloud-based applications across hybrid or multi-cloud environments for agility and scalability.",
     icon: <Cloud className="w-10 h-10 text-violet-600" />,
-    img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80", // cloud & coding
+    img: "/cloud-native.jpg", // cloud & coding
   },
   {
     title: "Security, Compliance & Platform Governance",
     desc: "Ensure enterprise-grade security, compliance, and governance across all technology and platform layers.",
     icon: <Shield className="w-10 h-10 text-violet-600" />,
-    img: "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80", // cybersecurity concept
+    img: "/gov.jpg", // cybersecurity concept
   },
 ];
 
@@ -39,7 +40,7 @@ const PlatformEngineering: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-20 py-32 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
             Empowering Business Growth through{" "}
-            <span className="text-violet-600">
+            <span className="text-cyan-700">
               Technology & Platform Engineering
             </span>
           </h1>
@@ -50,7 +51,7 @@ const PlatformEngineering: React.FC = () => {
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-violet-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-violet-700 transition"
+            className="inline-block bg-cyan-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-violet-700 transition"
           >
             Get Started
           </Link>
@@ -72,7 +73,7 @@ const PlatformEngineering: React.FC = () => {
 
             <div className="max-w-3xl space-y-6 text-left">
               <div>
-                <h3 className="text-xl font-semibold text-violet-600 mb-2">
+                <h3 className="text-xl font-bold text-cyan-600 mb-2">
                   What Is Technology & Platform Engineering?
                 </h3>
                 <p className="text-slate-700">
@@ -86,7 +87,7 @@ const PlatformEngineering: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-violet-600 mb-2">
+                <h3 className="text-xl font-bold text-cyan-600 mb-2">
                   The Foundation of Modern Digital Enterprises
                 </h3>
                 <p className="text-slate-700">
@@ -98,7 +99,7 @@ const PlatformEngineering: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-violet-600 mb-2">
+                <h3 className="text-xl font-bold text-cyan-600 mb-2">
                   Engineering Technology for Reliability & Growth
                 </h3>
                 <p className="text-slate-700">
@@ -114,56 +115,65 @@ const PlatformEngineering: React.FC = () => {
       </div>
 
       {/* Who Uses & Why Section */}
-      <div className="bg-gradient-to-r from-violet-50 to-white py-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-20 grid md:grid-cols-2 gap-12 items-center">
-          <ScrollAnimation delay={250}>
-            <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Who Uses Technology & Platform Engineering?
-              </h2>
-              <ul className="list-disc pl-6 space-y-2 text-slate-700">
-                <li>Organizations aiming to modernize their technology stack.</li>
-                <li>Development teams building enterprise-grade solutions.</li>
-                <li>Businesses migrating to cloud or hybrid environments.</li>
-                <li>Industries focusing on digital resilience and performance.</li>
-                <li>Startups scaling rapidly with tech-enabled operations.</li>
-              </ul>
-            </div>
-          </ScrollAnimation>
-          <ScrollAnimation delay={300}>
-            <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Why Technology & Platform Engineering Matters
-              </h2>
-              <ul className="list-disc pl-6 space-y-2 text-slate-700">
-                <li>
-                  <b>Innovation Acceleration:</b> Drive faster digital product
-                  development and deployment.
-                </li>
-                <li>
-                  <b>System Reliability:</b> Ensure consistent uptime and smooth
-                  operations.
-                </li>
-                <li>
-                  <b>Security First:</b> Integrate compliance and threat
-                  protection at every layer.
-                </li>
-                <li>
-                  <b>Operational Agility:</b> Support quick adaptation to
-                  technology and market changes.
-                </li>
-                <li>
-                  <b>Scalable Growth:</b> Build platforms that expand with your
-                  business needs.
-                </li>
-              </ul>
-            </div>
-          </ScrollAnimation>
-        </div>
+<div className="bg-gradient-to-r from-violet-50 to-white py-20">
+  <div className="max-w-7xl mx-auto px-6 md:px-20 grid md:grid-cols-2 gap-12 items-center">
+    <ScrollAnimation delay={250}>
+      <div>
+        <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          Who Uses Technology & Platform Engineering?
+        </h2>
+        <ul className="list-none space-y-2 text-slate-700">
+          {[
+            "Organizations: aiming to modernize their technology stack.",
+            "Development teams: building enterprise-grade solutions.",
+            "Businesses: migrating to cloud or hybrid environments.",
+            "Industries: focusing on digital resilience and performance.",
+            "Startups: scaling rapidly with tech-enabled operations."
+          ].map((item, index) => {
+            const [title, ...rest] = item.split(":");
+            return (
+              <li key={index} className="flex items-start gap-2">
+                <FaCheckSquare className="mt-1 text-cyan-600 flex-shrink-0" />
+                <span>
+                  <span className="font-bold">{title}:</span> {rest.join(":").trim()}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
       </div>
+    </ScrollAnimation>
+    <ScrollAnimation delay={300}>
+      <div>
+        <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          Why Technology & Platform Engineering Matters
+        </h2>
+        <ul className="list-none space-y-2 text-slate-700">
+          {[
+            "Innovation Acceleration: Drive faster digital product development and deployment.",
+            "System Reliability: Ensure consistent uptime and smooth operations.",
+            "Security First: Integrate compliance and threat protection at every layer.",
+            "Operational Agility: Support quick adaptation to technology and market changes.",
+            "Scalable Growth: Build platforms that expand with your business needs."
+          ].map((item, index) => {
+            const [title, ...rest] = item.split(":");
+            return (
+              <li key={index} className="flex items-start gap-2">
+                <FaCheckSquare className="mt-1 text-cyan-600 flex-shrink-0" />
+                <span>
+                  <span className="font-bold">{title}:</span> {rest.join(":").trim()}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </ScrollAnimation>
+  </div>
+</div>
 
       {/* Services Section */}
-      <div className="max-w-7xl mx-auto px-6 md:px-20 py-20">
+      <div className="max-w-5xl mx-auto px-6 md:px-20 py-20">
         <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
           Our Technology & Platform Engineering Services
         </h2>
@@ -190,13 +200,13 @@ const PlatformEngineering: React.FC = () => {
       </div>
 
       {/* Benefits Section */}
-      <div className="bg-violet-600 py-20 text-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-20 text-center">
+      <div className="bg-cyan-600 py-20 text-white">
+        <div className="max-w-6xl mx-auto px-6 md:px-20 text-center">
           <h2 className="text-3xl font-bold mb-10">
             Key Benefits of Technology & Platform Engineering
           </h2>
           <div className="grid md:grid-cols-3 gap-8 text-left">
-            <div className="bg-violet-500/20 rounded-2xl p-6">
+            <div className="bg-cyan-500/20 rounded-2xl p-6">
               <h3 className="text-xl font-semibold mb-2">
                 Improved Efficiency & Reliability
               </h3>
@@ -205,7 +215,7 @@ const PlatformEngineering: React.FC = () => {
                 stability through automation and robust design.
               </p>
             </div>
-            <div className="bg-violet-500/20 rounded-2xl p-6">
+            <div className="bg-cyan-500/20 rounded-2xl p-6">
               <h3 className="text-xl font-semibold mb-2">
                 Accelerated Digital Innovation
               </h3>
@@ -214,7 +224,7 @@ const PlatformEngineering: React.FC = () => {
                 next-generation digital solutions.
               </p>
             </div>
-            <div className="bg-violet-500/20 rounded-2xl p-6">
+            <div className="bg-cyan-500/20 rounded-2xl p-6">
               <h3 className="text-xl font-semibold mb-2">
                 Scalable & Secure Foundations
               </h3>

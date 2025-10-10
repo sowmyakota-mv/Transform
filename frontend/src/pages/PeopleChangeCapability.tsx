@@ -48,7 +48,7 @@ import ScrollAnimation from "../animation/ScrollAnimation";
 const PeopleChangeCapability: React.FC = () => {
   return (
     <section className="bg-gray-50 text-gray-900">
-      <div className="max-w-7xl mx-auto px-6 md:px-20 py-24">
+      <div className="max-w-7xl mx-auto px-6 md:px-20 py-28">
         <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-12">
           People & Change Capability
         </h1>

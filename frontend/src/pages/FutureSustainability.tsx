@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ScrollAnimation from "../animation/ScrollAnimation";
+import { FaCheckSquare } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const FutureSustainability: React.FC = () => {
+  const navigate=useNavigate()
   const pillars = [
     {
       title: "Delivering Net Positive Impact",
@@ -78,12 +81,12 @@ const FutureSustainability: React.FC = () => {
   }, []);
 
   return (
-    <section id="sustainability" className="bg-gradient-to-b from-white to-green-50 py-16 px-10 md:px-24 relative">
+    <section id="sustainability" className="bg-gradient-to-b from-white to-green-50 py-32 md:py-16 px-10 md:px-24 relative ">
 
       {/* Hero Section */}
       <ScrollAnimation delay={100}>
         <div
-          className="relative h-[80vh] flex items-center justify-center text-center text-white rounded-2xl overflow-hidden mb-20"
+          className="relative h-auto md:h-[80vh] flex items-center justify-center text-center text-white rounded-2xl overflow-hidden mb-20"
           style={{
             backgroundImage: "url('/images/hero-sustainability.jpg')",
             backgroundSize: "cover",
@@ -92,7 +95,7 @@ const FutureSustainability: React.FC = () => {
         >
           <div className="absolute inset-0 bg-green-900/50"></div>
           <div className="relative z-10 max-w-3xl px-6">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-up bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-green-700">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-up bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-green-700">
               Transforming Work with Sustainability at the Core
             </h2>
             <p className="text-lg mb-2 animate-fade-up delay-200">
@@ -139,11 +142,14 @@ const FutureSustainability: React.FC = () => {
       <div key={i} className="w-full flex-shrink-0 text-center px-4 py-6">
         <h4 className="text-2xl font-bold text-green-800 mb-3">{pillar.title}</h4>
         <p className="text-gray-700 mb-4 max-w-3xl mx-auto leading-relaxed">{pillar.desc}</p>
-        <ul className="list-disc list-inside text-gray-600 text-left inline-block max-w-md mx-auto space-y-1">
-          {pillar.points.map((pt, j) => (
-            <li key={j}>{pt}</li>
-          ))}
-        </ul>
+        <ul className="text-gray-600 text-left inline-block max-w-md mx-auto space-y-1">
+  {pillar.points.map((pt, j) => (
+    <li key={j} className="flex items-start gap-2">
+      <FaCheckSquare className="text-green-600 mt-1 flex-shrink-0" />
+      <span>{pt}</span>
+    </li>
+  ))}
+</ul>
       </div>
     ))}
   </div>
@@ -251,7 +257,7 @@ const FutureSustainability: React.FC = () => {
             <p className="text-lg mb-8">
               Whether through workshops, consultations, or collaborative projects, every step counts toward a sustainable, equitable digital future.
             </p>
-            <button className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition">
+            <button onClick={()=>navigate("/contact")} className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition">
               Arrange a Session or Connect
             </button>
           </div>
