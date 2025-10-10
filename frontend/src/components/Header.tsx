@@ -69,7 +69,7 @@ const Header: React.FC = () => {
   <img
     src="/logo.png" 
     alt="InnovicSolutions Logo"
-    className="w-24 h-12 object-contain sm:w-24 sm:h-14"
+    className="w-24 h-12 object-contain sm:w-14 sm:h-14"
   />
   <span className="text-2xl md:text-4xl sm:text-2xl font-extrabold text-orange-900 mt-2">
     InnovicSolutions
