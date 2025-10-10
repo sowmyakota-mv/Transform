@@ -1,6 +1,14 @@
 import { useEffect, useState, useRef } from "react";
 
-export const useScrollAnimation = (threshold: number = 0.3) => {
+interface UseScrollAnimationOptions {
+  threshold?: number;
+  once?: boolean;
+}
+
+export const useScrollAnimation = ({
+  threshold = 0.3,
+  once = true,
+}: UseScrollAnimationOptions = {}) => {
   const ref = useRef<HTMLElement | null>(null);
   const [visible, setVisible] = useState(false);
 
@@ -9,8 +17,10 @@ export const useScrollAnimation = (threshold: number = 0.3) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setVisible(true); // Trigger animation once
-            observer.unobserve(entry.target); // Stop observing after first intersection
+            setVisible(true);
+            if (once && ref.current) {
+              observer.unobserve(ref.current);
+            }
           }
         });
       },
@@ -20,7 +30,7 @@ export const useScrollAnimation = (threshold: number = 0.3) => {
     if (ref.current) observer.observe(ref.current);
 
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, once]);
 
   return { ref, visible };
 };
