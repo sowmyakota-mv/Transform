@@ -4,10 +4,13 @@ import { useScrollAnimation } from "./useScrollAnimation";
 
 interface ScrollAnimationProps {
   children: ReactNode;
-  delay?: number; // optional delay for staggered effect
+  delay?: number; 
+  threshold?: number;  // Add this
+  once?: boolean;
 }
 
-const ScrollAnimation: React.FC<ScrollAnimationProps> = ({ children, delay = 0 }) => {
+const ScrollAnimation: React.FC<ScrollAnimationProps> = ({ children, delay = 0 , threshold = 0.1,
+  once = false}) => {
   const { ref, visible } = useScrollAnimation();
 
   return (

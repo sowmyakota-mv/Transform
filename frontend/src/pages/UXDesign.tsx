@@ -2,7 +2,7 @@
 import React from "react";
 import ScrollAnimation from "../animation/ScrollAnimation";
 import { Link } from "react-router-dom";
-import { Palette, Lightbulb, Monitor, Users, PenTool, Cpu, Code } from "lucide-react";
+import {  Lightbulb, Monitor, Users, PenTool, Code } from "lucide-react";
 
 const servicesData = [
   {

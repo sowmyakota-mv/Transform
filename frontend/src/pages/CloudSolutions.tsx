@@ -1,7 +1,7 @@
 // src/components/CloudSolutions.tsx
 import React from "react";
 import ScrollAnimation from "../animation/ScrollAnimation";
-import { Cloud, Lock, Server, Settings, CloudUpload } from "lucide-react";
+import {  Lock, Server, Settings, CloudUpload } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const servicesData = [

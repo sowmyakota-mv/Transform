@@ -30,7 +30,7 @@ const PeopleBehindInnovation: React.FC = () => {
   return (
     <section className="bg-gradient-to-b from-white to-blue-50 py-24 px-6 sm:px-10 md:px-24">
       {/* Hero Section */}
-      <ScrollAnimation delay={100} once threshold={0.1}>
+      <ScrollAnimation delay={100} threshold={0.1}>
         <div className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             The People Behind Innovation
@@ -45,7 +45,7 @@ const PeopleBehindInnovation: React.FC = () => {
       </ScrollAnimation>
 
       {/* Culture & Values Section */}
-      <ScrollAnimation delay={200} once threshold={0.1}>
+      <ScrollAnimation delay={200} threshold={0.1}>
         <div className="max-w-5xl mx-auto mb-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -73,7 +73,7 @@ const PeopleBehindInnovation: React.FC = () => {
       </ScrollAnimation>
 
       {/* Processes & Expertise Section */}
-<ScrollAnimation delay={250} once threshold={0.1}>
+<ScrollAnimation delay={250} threshold={0.1}>
   <div className="max-w-5xl mx-auto mb-20">
     <div className="grid md:grid-cols-2 gap-12 items-center">
       <div className="order-2 md:order-1">
@@ -101,7 +101,7 @@ const PeopleBehindInnovation: React.FC = () => {
 </ScrollAnimation>
 
       {/* Impact Section */}
-      <ScrollAnimation delay={300} once threshold={0.1}>
+      <ScrollAnimation delay={300} threshold={0.1}>
         <div className="max-w-5xl mx-auto mb-20 text-left">
           <h3 className="text-3xl font-semibold text-purple-700 mb-6 text-center">Our Impact</h3>
           <p className="text-gray-700 mb-4 text-center">
@@ -126,7 +126,7 @@ const PeopleBehindInnovation: React.FC = () => {
       </ScrollAnimation>
 
       {/* Voices of Innovation */}
-      <ScrollAnimation delay={350} once threshold={0.1}>
+      <ScrollAnimation delay={350} threshold={0.1}>
         <div className="bg-purple-50 rounded-2xl py-10 px-6 md:px-12 mb-12">
           <h3 className="text-2xl font-semibold text-purple-800 mb-6 text-center">
             Voices of Innovation
