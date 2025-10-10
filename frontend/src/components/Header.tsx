@@ -72,7 +72,7 @@ const Header: React.FC = () => {
     className="w-24 h-12 object-contain sm:w-14 sm:h-14"
   />
   <span className="text-2xl md:text-4xl sm:text-2xl font-extrabold text-orange-900 mt-2">
-    InnovicSolutions
+    InnovicSolution
   </span>
 </div>
 
