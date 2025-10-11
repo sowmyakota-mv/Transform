@@ -51,7 +51,7 @@ const cyberServicesData = [
 
 const CyberSecurityNetworking: React.FC = () => {
   return (
-    <section className="bg-gray-50 text-gray-900 py-28">
+    <section className="bg-gray-50 text-gray-900 py-36 -mb-28">
       <div className="max-w-7xl mx-auto px-6 md:px-20">
         <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-12">
           Cybersecurity & Networking

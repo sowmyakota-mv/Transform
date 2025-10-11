@@ -5,7 +5,7 @@ const projects = [
   {
     title: 'Interactive Product Configurator',
     description: '3D model manipulation with real-time customization using WebGL and Three.js.',
-    imageUrl: '/3d-img.jpg',
+    imageUrl: '/3d-confi.jpg',
     link: '/projects/product-configurator',
     bg: 'bg-blue-100', 
     hoverBg: 'hover:bg-blue-600', // darker blue
@@ -13,7 +13,7 @@ const projects = [
   {
     title: 'AI-Powered User Journey',
     description: 'Smart personalization with predictive analytics built on React and machine learning.',
-    imageUrl: '/ai-img.jpg',
+    imageUrl: '/networking.jpg',
     link: '/projects/ai-user-journey',
     bg: 'bg-green-100', 
     hoverBg: 'hover:bg-green-600', // darker green
@@ -21,7 +21,7 @@ const projects = [
   {
     title: 'Immersive Brand Experience',
     description: 'Virtual showroom with interactive elements using VR and WebXR technologies.',
-    imageUrl: '/animation-img.jpg',
+    imageUrl: '/gov.jpg',
     link: '/projects/immersive-brand',
     bg: 'bg-purple-100',
     hoverBg: 'hover:bg-purple-600', // darker purple

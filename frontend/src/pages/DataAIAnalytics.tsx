@@ -28,7 +28,7 @@ const servicesData = [
 
 const DataAIAnalytics: React.FC = () => {
   return (
-    <section className="bg-slate-50 py-20 md:py-36 -mb-32">
+    <section className="bg-slate-50 py-32 md:py-36 -mb-32">
       {/* Hero Section */}
       <ScrollAnimation delay={100}>
         <div className="max-w-7xl mx-auto text-center px-6 md:px-20 mb-20">

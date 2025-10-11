@@ -56,7 +56,7 @@ const Aboutsection: React.FC = () => {
         <img
           src={aboutImage}
           alt="Transform UK Team"
-          className="w-full max-w-3xl h-auto object-cover scale-125 ml-18 rounded-2xl"
+          className="w-full max-w-3xl h-auto object-cover scale-125 -ml-16 rounded-2xl"
         />
       </div>
 

@@ -28,6 +28,9 @@ import SustainabilityESG from './pages/SustainabilityESG'
 import PeopleChangeCapability from './pages/PeopleChangeCapability'
 import ProductManagementStrategy from './pages/ProductManagementStrategy'
 import ScrollToTop from './animation/ScrollToTop'
+import ProductConfigurator from './project/ProductConfigurator'
+import AiUserJourney from './project/AiUserJourney'
+import ImmersiveBrandExperience from './project/ImmersiveBrandExperience'
 
 function App() {
   return (
@@ -63,6 +66,9 @@ function App() {
         <Route path='/expertise/it-strategy' element={<ITStrategy/>}/>
         <Route path='/contact' element={<ContactSection/>}/>
         <Route path='/expertise/product-management' element={<ProductManagementStrategy/>}/>
+        <Route path='/projects/product-configurator' element={<ProductConfigurator/>}/>
+        <Route path='/projects/ai-user-journey' element={<AiUserJourney/>}/>
+        <Route path='/projects/immersive-brand' element={<ImmersiveBrandExperience/>}/>
       </Routes>
       <Footersection />
     </Router>

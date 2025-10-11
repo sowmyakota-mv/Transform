@@ -63,7 +63,7 @@ const productServicesData = [
 
 const ProductManagementStrategy: React.FC = () => {
   return (
-    <section className="bg-gradient-to-b from-gray-50 via-white to-gray-50 text-gray-900 py-28">
+    <section className="bg-gradient-to-b from-gray-50 via-white to-gray-50 text-gray-900 py-36 -mb-48">
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         <h1 className="text-5xl md:text-6xl font-extrabold text-center mb-24">
           Product Management & Strategy

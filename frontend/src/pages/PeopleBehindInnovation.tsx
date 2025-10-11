@@ -40,24 +40,23 @@ const PeopleBehindInnovation: React.FC = () => {
   );
 
   return (
-    <section className="bg-gradient-to-b from-white to-blue-50 py-32 px-6 sm:px-10 md:px-24">
+    <section className="bg-gradient-to-b from-white to-blue-50 py-32 px-6 sm:px-10 md:px-24 -mb-36">
 
-      {/* Hero Section */}
-      <ScrollAnimation delay={100} threshold={0.1}>
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            The People Behind Innovation
-          </h2>
-          <p className="text-lg text-gray-700">
-            At Transform, innovation thrives through a culture of curiosity, collaboration, and impact. 
-            Our team leverages expertise & experience to help organisations transform, grow, & make a meaningful difference in their industries.
-          </p>
-          <p className="mt-4 text-lg text-gray-700">
-            While we celebrate individual excellence, it’s our collective spirit, culture, and dedication that drive true innovation. 
-            Explore the principles that guide our work and the values that define us.
-          </p>
-        </div>
-      </ScrollAnimation>
+      <div className="relative bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-600 text-white py-28 px-6 md:px-12 rounded-3xl shadow-xl overflow-hidden mb-16">
+  <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+  <div className="relative text-center max-w-4xl mx-auto mb-16">
+    <h2 className="text-4xl md:text-5xl font-bold mb-6">The People Behind Innovation</h2>
+    <p className="text-lg opacity-90">
+      At Transform, innovation thrives through a culture of curiosity, collaboration, and impact.
+      Our team leverages expertise & experience to help organisations transform, grow, & make a meaningful difference in their industries.
+    </p>
+    <p className="mt-4 text-lg opacity-90">
+      While we celebrate individual excellence, it’s our collective spirit, culture, and dedication that drive true innovation.
+      Explore the principles that guide our work and the values that define us.
+    </p>
+  </div>
+</div>
+
 
       {/* Culture & Values Section */}
       <ScrollAnimation delay={200} threshold={0.1}>

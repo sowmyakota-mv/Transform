@@ -8,7 +8,7 @@ const DigitalTransformation: React.FC = () => {
   return (
     <section
       id="/expertise/digital-transformation"
-      className="bg-gradient-to-b from-white via-slate-50 to-slate-100 py-28 md:py-36"
+      className="bg-gradient-to-b from-white via-slate-50 to-slate-100 py-28 md:py-36 -mb-24"
     >
       {/* Hero Section */}
 <ScrollAnimation delay={100}>

@@ -81,7 +81,7 @@ const FutureSustainability: React.FC = () => {
   }, []);
 
   return (
-    <section id="sustainability" className="bg-gradient-to-b from-white to-green-50 py-32 md:py-16 px-10 md:px-24 relative ">
+    <section id="sustainability" className="bg-gradient-to-b from-white to-green-50 py-32 md:py-16 px-10 md:px-24 relative -mb-20">
 
       {/* Hero Section */}
       <ScrollAnimation delay={100}>

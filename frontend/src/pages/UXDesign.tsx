@@ -49,10 +49,10 @@ const UXDesign: React.FC = () => {
     <section className="bg-white text-gray-900">
       {/* Hero Section */}
       <ScrollAnimation delay={100}>
-        <div className="max-w-7xl mx-auto px-6 md:px-20 py-32 text-center">
+        <div className="max-w-7xl mx-auto px-6 md:px-20 py-36 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
             Redefining Experiences with{" "}
-            <span className="text-pink-600">UX & Design Innovation</span>
+            <span className="text-pink-800">UX & Design Innovation</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mb-8">
             Craft meaningful, user-centered experiences that connect creativity
@@ -61,7 +61,7 @@ const UXDesign: React.FC = () => {
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-pink-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-pink-700 transition"
+            className="inline-block bg-pink-800 text-white font-semibold py-3 px-6 rounded-full hover:bg-pink-700 transition"
           >
             Let’s Collaborate
           </Link>
@@ -69,7 +69,7 @@ const UXDesign: React.FC = () => {
       </ScrollAnimation>
 
       {/* What Section */}
-      <div className="max-w-6xl mx-auto px-6 md:px-20 mb-24">
+      <div className="max-w-6xl mx-auto px-6 md:px-20 mb-24 -mt-24">
         <ScrollAnimation delay={200}>
           <div className="flex flex-col items-center bg-gradient-to-br from-white to-pink-50 rounded-3xl shadow-lg overflow-hidden p-8 md:p-12">
             <img
@@ -119,7 +119,7 @@ const UXDesign: React.FC = () => {
             const [title, ...rest] = item.split(":");
             return (
               <li key={index} className="flex items-start gap-2">
-                <FaCheckSquare className="mt-1 text-pink-600 flex-shrink-0" />
+                <FaCheckSquare className="mt-1 text-pink-800 flex-shrink-0" />
                 <span>
                   <span className="font-bold">{title}:</span> {rest.join(":").trim()}
                 </span>
@@ -145,7 +145,7 @@ const UXDesign: React.FC = () => {
             const [title, ...rest] = item.split(":");
             return (
               <li key={index} className="flex items-start gap-2">
-                <FaCheckSquare className="mt-1 text-pink-600 flex-shrink-0" />
+                <FaCheckSquare className="mt-1 text-pink-800 flex-shrink-0" />
                 <span>
                   <span className="font-bold">{title}:</span> {rest.join(":").trim()}
                 </span>
@@ -186,7 +186,7 @@ const UXDesign: React.FC = () => {
       </div>
 
       {/* Benefits Section */}
-      <div className="bg-pink-600 py-20 text-white">
+      <div className="bg-pink-800 py-20 text-white">
         <div className="max-w-6xl mx-auto px-6 md:px-20 text-center">
           <h2 className="text-3xl font-bold mb-10">
             Key Benefits of UX & Design Innovation

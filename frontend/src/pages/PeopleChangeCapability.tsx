@@ -48,15 +48,19 @@ import ScrollAnimation from "../animation/ScrollAnimation";
 const PeopleChangeCapability: React.FC = () => {
   return (
     <section className="bg-gray-50 text-gray-900">
-      <div className="max-w-7xl mx-auto px-6 md:px-20 py-28">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-12">
-          People & Change Capability
-        </h1>
-        <p className="text-center text-lg md:text-xl text-gray-700 mb-20 max-w-3xl mx-auto">
-          Transform UK specializes in guiding organizations through complex transformations by focusing on the human aspect of change. Their approach emphasizes the development of people, fostering a culture of collaboration, and implementing strategies that ensure sustainable and impactful change.
-        </p>
+      <div className="relative bg-gradient-to-r from-blue-600 via-teal-500 to-purple-600 text-white py-36 px-6 md:px-20 -mb-16 overflow-hidden shadow-xl">
+  <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+  <div className="relative max-w-7xl mx-auto text-center">
+    <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
+      People & Change Capability
+    </h1>
+    <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
+      Transform UK specializes in guiding organizations through complex transformations by focusing on the human aspect of change. Their approach emphasizes the development of people, fostering a culture of collaboration, and implementing strategies that ensure sustainable and impactful change.
+    </p>
+  </div>
 
-        <div className="space-y-20">
+
+        <div className="space-y-20 py-16">
           {capabilitiesData.map((item, idx) => (
             <ScrollAnimation key={idx} delay={idx * 100 + 100}>
               <div
