@@ -16,7 +16,6 @@ const words = [
 const Herosection: React.FC = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [showBg, setShowBg] = useState(false);
-  const [showGradient, setShowGradient] = useState(false);
   const [showTransform, setShowTransform] = useState(false);
   const [showKeyword, setShowKeyword] = useState(false);
   const [showSubheading, setShowSubheading] = useState(false);
@@ -34,7 +33,6 @@ const Herosection: React.FC = () => {
   useEffect(() => {
     const timers = [
       setTimeout(() => setShowBg(true), 300),
-      setTimeout(() => setShowGradient(true), 600),
       setTimeout(() => setShowTransform(true), 1200),
       setTimeout(() => setShowKeyword(true), 1800),
       setTimeout(() => setShowSubheading(true), 2400),
@@ -53,43 +51,33 @@ const Herosection: React.FC = () => {
         style={{ backgroundImage: "url('/hero-img.jpg')" }}
       ></div>
 
-      {/* White gradient overlay */}
-      <div
-        className={`absolute inset-0 bg-gradient-to-br from-white/90 via-white/70 to-orange-200/30 transition-opacity duration-[1500ms] ${
-          showGradient ? "opacity-60" : "opacity-0"
-        }`}
-      ></div>
-
-      {/* Black hover gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/80 opacity-0 group-hover:opacity-60 transition-opacity duration-700"></div>
+      {/* Black gradient overlay (default) */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/40 opacity-100 group-hover:opacity-0 transition-opacity duration-700"></div>
 
       {/* Content */}
       <div className="relative z-10 text-center flex flex-col items-center">
-        {/* Transform Your */}
+        {/* Title */}
         <h1
-          className={`text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 transition-all duration-[1500ms] ${
-            showTransform ? "scale-100 opacity-100" : "scale-90 opacity-0"
-          }`}
+          className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 transition-colors duration-500 drop-shadow-md text-white group-hover:text-white"
+          style={{ fontFamily: "Poppins, sans-serif" }}
         >
           Transform Your
         </h1>
 
         {/* Animated keyword */}
         <h2
-          className={`text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 transition-all duration-[1500ms] ${
-            showKeyword ? "scale-100 opacity-100" : "scale-90 opacity-0"
-          }`}
+          className="text-5xl md:text-6xl lg:text-7xl font-semibold italic mb-6 transition-colors duration-500 drop-shadow-lg"
+          style={{ fontFamily: "Montserrat, sans-serif" }}
         >
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-400">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600 group-hover:text-cyan-500">
             {words[currentWordIndex]}
           </span>
         </h2>
 
         {/* Subheading */}
         <p
-          className={`text-lg md:text-xl lg:text-2xl text-black mb-8 max-w-xl transition-all duration-[1500ms] ${
-            showSubheading ? "scale-100 opacity-100" : "scale-90 opacity-0"
-          }`}
+          className="text-lg md:text-xl lg:text-2xl mb-8 max-w-xl transition-colors duration-500 text-white group-hover:text-white"
+          style={{ fontFamily: "Roboto, sans-serif" }}
         >
           Helping you innovate, grow, and succeed with tailored digital solutions.
         </p>

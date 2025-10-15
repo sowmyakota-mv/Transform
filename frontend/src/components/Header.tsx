@@ -161,46 +161,47 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Dropdown */}
-        {menuOpen && (
-          <div className="md:hidden bg-white rounded-b-2xl shadow-md px-6 py-4 space-y-3 transition-all duration-300">
-            {navLinks.map((link) => (
-              <div key={link.title}>
-                {link.submenu ? (
-                  <details className="group">
-                    <summary className="cursor-pointer font-medium text-orange-900 hover:text-purple-700">
-                      {link.title}
-                    </summary>
-                    <div className="pl-4 mt-2 space-y-1">
-                      {link.submenu.map((sub) => (
-                        <Link
-                          key={sub.title}
-                          to={sub.href}
-                          className="block text-sm text-gray-700 hover:text-purple-700"
-                          onClick={() => setMenuOpen(false)}
-                        >
-                          {sub.title}
-                        </Link>
-                      ))}
-                    </div>
-                  </details>
-                ) : (
-                  <Link
-                    to={link.href || "/"}
-                    className="block font-medium text-orange-900 hover:text-purple-700"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {link.title}
-                  </Link>
-                )}
-              </div>
-            ))}
-            <div className="pt-3">
-              <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-lg">
-                Register
-              </button>
+{menuOpen && (
+  <div className="md:hidden bg-white rounded-b-2xl shadow-md px-6 py-4 space-y-3 transition-all duration-300
+                  max-h-[70vh] overflow-y-auto">
+    {navLinks.map((link) => (
+      <div key={link.title}>
+        {link.submenu ? (
+          <details className="group">
+            <summary className="cursor-pointer font-medium text-orange-900 hover:text-purple-700">
+              {link.title}
+            </summary>
+            <div className="pl-4 mt-2 space-y-1">
+              {link.submenu.map((sub) => (
+                <Link
+                  key={sub.title}
+                  to={sub.href}
+                  className="block text-sm text-gray-700 hover:text-purple-700"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {sub.title}
+                </Link>
+              ))}
             </div>
-          </div>
+          </details>
+        ) : (
+          <Link
+            to={link.href || "/"}
+            className="block font-medium text-orange-900 hover:text-purple-700"
+            onClick={() => setMenuOpen(false)}
+          >
+            {link.title}
+          </Link>
         )}
+      </div>
+    ))}
+    <div className="pt-3">
+      <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-lg">
+        Register
+      </button>
+    </div>
+  </div>
+)}
       </header>
 
       {/* Scroll Line */}

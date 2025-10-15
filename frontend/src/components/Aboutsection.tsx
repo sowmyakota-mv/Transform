@@ -70,50 +70,56 @@ const Aboutsection: React.FC = () => {
   `}
 >
   {/* Section label */}
-  <p
-    ref={h2Ref}
-    data-id="h2"
-    className={`text-black-400 font-bold uppercase mb-4 text-2xl`}
-  >
-    Who We Are
-  </p>
+<p
+  ref={h2Ref}
+  data-id="h6"
+  className="text-cyan-600 font-semibold tracking-widest mb-5 text-xl md:text-xl"
+  style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "1px" }}
+>
+  Who We Are
+</p>
 
-  {/* First paragraph */}
-  <p
-    ref={para1Ref}
-    data-id="para1"
-    className="text-base md:text-lg leading-relaxed mb-4"
+{/* First paragraph */}
+<p
+  ref={para1Ref}
+  data-id="para1"
+  className="text-gray-700 md:text-lg leading-relaxed mb-2"
+  style={{ fontFamily: "'Manrope', sans-serif", lineHeight: "1.8" }}
+>
+  <span className="block text-4xl md:text-5xl font-bold text-gray-900 mb-3 tracking-tight"
+    style={{ fontFamily: "'Poppins', sans-serif" }}
   >
-    <span className="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500">
-      Welcome to transform your innovation
-    </span>
-    , we are a full-spectrum digital transformation consultancy rooted in
-    strategy, technology, and human-first design. Our mission is to help
-    organisations break through complexity, connect data and systems, and
-    unlock lasting change for their people, customers, and operations.
-  </p>
+    Welcome to Transform Your Innovation
+  </span>
+  We are a full-spectrum digital transformation consultancy rooted in
+  strategy, technology, and human-first design. Our mission is to help
+  organisations break through complexity, connect data and systems, and
+  unlock lasting change for their people, customers, and operations.
+</p>
 
-  {/* Second paragraph with Learn More button */}
-  <div
-    ref={para2Ref}
-    data-id="para2"
-    className="text-base md:text-lg leading-relaxed mb-4"
+{/* Second paragraph with Learn More button */}
+<div
+  ref={para2Ref}
+  data-id="para2"
+  className="text-gray-700 md:text-lg leading-relaxed"
+  style={{ fontFamily: "'Manrope', sans-serif", lineHeight: "1.8" }}
+>
+  Blending deep sector insight with agile delivery and AI-driven
+  technologies, we partner with clients across public and private
+  sectors to turn bold ideas into tangible outcomes. We work
+  collaboratively from vision to execution so that transformation
+  sticks.
+  <br />
+  <button
+    onClick={() => navigate("/abouttransform")}
+    className="mt-6 inline-flex items-center space-x-2 px-6 py-3 text-cyan-600 font-semibold text-base rounded-lg border border-cyan-600 transition-all duration-300 hover:bg-cyan-600 hover:text-2xl hover:text-white  hover:shadow-md"
+    style={{ fontFamily: "'Inter', sans-serif" }}
   >
-    Blending deep sector insight with agile delivery and AI-driven
-    technologies, we partner with clients across public and private
-    sectors to turn bold ideas into tangible outcomes. We work
-    collaboratively from vision to execution so that transformation
-    sticks.
-    <br />
-    <button onClick={()=>navigate("/abouttransform")}
-      className="mt-4 inline-flex items-center space-x-2 px-4 py-2 text-orange-500 font-semibold transition-all duration-300
-      rounded-lg hover:bg-orange-500 hover:text-white hover:shadow-md hover:border hover:border-orange-500"
-    >
-      <span >Learn More</span>
-      <span className="text-xl">&rarr;</span>
-    </button>
-  </div>
-      </div>
+    <span>Learn More</span>
+    <span className="text-xl">&rarr;</span>
+  </button>
+</div>
+</div>
     </div>
   </section>
 );

@@ -184,7 +184,7 @@ const PlatformEngineering: React.FC = () => {
                 <img
                   src={service.img}
                   alt={service.title}
-                  className="w-full h-64 object-cover group-hover:brightness-50 transition duration-300"
+                  className="w-full h-64 object-cover brightness-50 group-hover:brightness-100 transition duration-300"
                 />
                 <div className="absolute inset-0 flex flex-col justify-end p-6">
                   <div className="flex items-center mb-4">{service.icon}</div>

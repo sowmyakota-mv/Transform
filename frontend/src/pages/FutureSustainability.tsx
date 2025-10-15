@@ -84,29 +84,45 @@ const FutureSustainability: React.FC = () => {
     <section id="sustainability" className="bg-gradient-to-b from-white to-green-50 py-32 md:py-16 px-10 md:px-24 relative -mb-20">
 
       {/* Hero Section */}
-      <ScrollAnimation delay={100}>
-        <div
-          className="relative h-auto md:h-[80vh] flex items-center justify-center text-center text-white rounded-2xl overflow-hidden mb-20"
-          style={{
-            backgroundImage: "url('/images/hero-sustainability.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="absolute inset-0 bg-green-900/50"></div>
-          <div className="relative z-10 max-w-3xl px-6">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-up bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-green-700">
-              Transforming Work with Sustainability at the Core
-            </h2>
-            <p className="text-lg mb-2 animate-fade-up delay-200">
-              At Transform, our work aligns with the UN’s Sustainable Development Goals, ensuring measurable progress and positive impact.
-            </p>
-            <p className="text-lg animate-fade-up delay-300">
-              We combine social good, responsible practices, and innovative technology to create sustainable outcomes for clients, communities, and the planet.
-            </p>
-          </div>
-        </div>
-      </ScrollAnimation>
+<ScrollAnimation delay={100}>
+  <div
+    className="relative h-auto md:h-[80vh] flex items-center justify-center text-center rounded-2xl overflow-hidden mb-20"
+    style={{
+      backgroundImage: "url('/images/hero-sustainability.jpg')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  >
+    {/* Modern gradient overlay */}
+    <div className="absolute inset-0 bg-gradient-to-b from-teal-950/80 via-teal-900/70 to-emerald-950/80"></div>
+
+    {/* Content */}
+    <div className="relative z-10 max-w-3xl px-6 text-[#F4F7F6]">
+      <h2
+        className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-5 animate-fade-up bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-emerald-400"
+        style={{ fontFamily: "'Poppins', sans-serif", letterSpacing: "-0.5px" }}
+      >
+        Transforming Work with Sustainability at the Core
+      </h2>
+
+      <p
+        className="text-lg mb-3 animate-fade-up delay-200 text-[#E8F0EE]"
+        style={{ fontFamily: "'Manrope', sans-serif", lineHeight: "1.8" }}
+      >
+        At Transform, our work aligns with the UN’s Sustainable Development Goals,
+        ensuring measurable progress and positive impact.
+      </p>
+
+      <p
+        className="text-lg animate-fade-up delay-300 text-[#E8F0EE]"
+        style={{ fontFamily: "'Manrope', sans-serif", lineHeight: "1.8" }}
+      >
+        We combine social good, responsible practices, and innovative technology
+        to create sustainable outcomes for clients, communities, and the planet.
+      </p>
+    </div>
+  </div>
+</ScrollAnimation>
 
       {/* Our Core Focus Areas */}
       <div className="max-w-6xl mx-auto mb-20 relative">
