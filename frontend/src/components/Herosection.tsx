@@ -16,9 +16,6 @@ const words = [
 const Herosection: React.FC = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [showBg, setShowBg] = useState(false);
-  const [showTransform, setShowTransform] = useState(false);
-  const [showKeyword, setShowKeyword] = useState(false);
-  const [showSubheading, setShowSubheading] = useState(false);
   const [showButton, setShowButton] = useState(false);
 
   // Rotate words every 2 seconds
@@ -33,9 +30,6 @@ const Herosection: React.FC = () => {
   useEffect(() => {
     const timers = [
       setTimeout(() => setShowBg(true), 300),
-      setTimeout(() => setShowTransform(true), 1200),
-      setTimeout(() => setShowKeyword(true), 1800),
-      setTimeout(() => setShowSubheading(true), 2400),
       setTimeout(() => setShowButton(true), 3000),
     ];
     return () => timers.forEach((t) => clearTimeout(t));
