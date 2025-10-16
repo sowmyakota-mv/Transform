@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import aboutImage from "/aboutImg.png";
 import { useNavigate } from "react-router-dom";
+import ScrollAnimation from "../animation/ScrollAnimation";
 
 const Aboutsection: React.FC = () => {
   const navigate=useNavigate()
@@ -43,6 +44,7 @@ const Aboutsection: React.FC = () => {
   }, []);
 
   return (
+    <ScrollAnimation delay={200}>
   <section className="relative py-20 bg-white overflow-hidden group">
     <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center">
       {/* Left: Image */}
@@ -70,6 +72,7 @@ const Aboutsection: React.FC = () => {
   `}
 >
   {/* Section label */}
+  <ScrollAnimation delay={200}>
 <p
   ref={h2Ref}
   data-id="h6"
@@ -77,7 +80,7 @@ const Aboutsection: React.FC = () => {
   style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "1px" }}
 >
   Who We Are
-</p>
+</p></ScrollAnimation>
 
 {/* First paragraph */}
 <p
@@ -86,7 +89,7 @@ const Aboutsection: React.FC = () => {
   className="text-gray-700 md:text-lg leading-relaxed mb-2"
   style={{ fontFamily: "'Manrope', sans-serif", lineHeight: "1.8" }}
 >
-  <span className="block text-4xl md:text-5xl font-bold text-gray-900 mb-3 tracking-tight"
+  <span className="block text-3xl md:text-4xl font-bold text-gray-900 mb-3 tracking-tight"
     style={{ fontFamily: "'Poppins', sans-serif" }}
   >
     Welcome to Transform Your Innovation
@@ -121,7 +124,7 @@ const Aboutsection: React.FC = () => {
 </div>
 </div>
     </div>
-  </section>
+  </section></ScrollAnimation>
 );
 };
 

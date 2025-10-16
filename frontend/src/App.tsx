@@ -31,6 +31,10 @@ import ScrollToTop from './animation/ScrollToTop'
 import ProductConfigurator from './project/ProductConfigurator'
 import AiUserJourney from './project/AiUserJourney'
 import ImmersiveBrandExperience from './project/ImmersiveBrandExperience'
+import AIExperiments from './pages/AIExperiments'
+import PrototypeProjects from './pages/PrototypeProjects'
+import FutureTech from './pages/FutureTech'
+import Hackathons from './pages/Hackathons'
 
 function App() {
   return (
@@ -69,6 +73,10 @@ function App() {
         <Route path='/projects/product-configurator' element={<ProductConfigurator/>}/>
         <Route path='/projects/ai-user-journey' element={<AiUserJourney/>}/>
         <Route path='/projects/immersive-brand' element={<ImmersiveBrandExperience/>}/>
+        <Route path='/innovation/ai' element={<AIExperiments/>}/>
+        <Route path='/innovation/prototypes' element={<PrototypeProjects/>}/>
+        <Route path='/innovation/future-tech' element={<FutureTech/>}/>
+        <Route path='/innovation/hackathons' element={<Hackathons/>}/>
       </Routes>
       <Footersection />
     </Router>

@@ -5,7 +5,7 @@ import ScrollAnimation from "../animation/ScrollAnimation";
 
 const RegisterCTA: React.FC = () => {
   return (
-    <section className="py-12 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 relative overflow-hidden">
+    <section className="py-12 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 relative overflow-hidden -mb-16">
       {/* Background accent shapes */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse"></div>

@@ -8,7 +8,7 @@ const ProductConfigurator: React.FC = () => {
       <div className="container mx-auto px-6 md:px-20">
         {/* Title */}
         <ScrollAnimation delay={100}>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6">
             Interactive Product Configurator
           </h1>
         </ScrollAnimation>

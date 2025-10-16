@@ -8,7 +8,7 @@ const ImmersiveBrandExperience: React.FC = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-fuchsia-500 via-purple-500 to-indigo-600 text-white py-32 px-6 md:px-20 text-center">
         <ScrollAnimation delay={100}>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Immersive Brand Experience
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-purple-100">
