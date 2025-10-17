@@ -1,5 +1,6 @@
 import React from 'react';
 import ScrollAnimation from '../animation/ScrollAnimation';
+import { Link } from 'react-router-dom';
 
 const projects = [
   {
@@ -73,13 +74,14 @@ const OurProjects: React.FC = () => {
                 </p>
 
                 {/* View Project link */}
-                <a
-                  href={item.link}
-                  className="inline-flex items-center px-4 py-2 mb-4 ml-4 font-semibold text-gray-900 bg-gray-200 rounded-lg hover:bg-gray-300 transition"
-                >
-                  View Project
-                  <span className="ml-2 text-2xl font-bold">→</span>
-                </a>
+                <Link
+  to={item.link}
+  className="inline-flex items-center px-4 py-2 mb-4 ml-4 font-semibold text-gray-900 bg-gray-200 rounded-lg hover:bg-gray-300 transition"
+>
+  View Project
+  <span className="ml-2 text-2xl font-bold">→</span>
+</Link>
+
               </div>
             </ScrollAnimation>
           ))}
