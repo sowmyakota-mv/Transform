@@ -62,7 +62,7 @@ const Footersection: React.FC = () => {
               <li><a href="/expertise/digital-transformation" className="hover:text-white">Our Services</a></li>
               <li><a href="expertise/digital-transformation" className="hover:text-white">Expertise</a></li>
               <li><a href="/sustainability" className="hover:text-white">Careers</a></li>
-              <li><a href="/blogs" className="hover:text-white">Blogs</a></li>
+              <li><a href="/innovation/ai" className="hover:text-white">Innovation Lab</a></li>
               <li><a href="/contact" className="hover:text-white">Contact</a></li>
               <li><a href="/csr" className="hover:text-white">CSR</a></li>
             </ul>
