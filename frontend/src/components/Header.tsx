@@ -75,14 +75,16 @@ const Header: React.FC = () => {
         <div className="relative max-w-7xl mx-auto flex items-center justify-between w-full py-4 px-6">
           {/* Logo */}
           <div className="flex items-center -space-x-2 min-w-0">
-            <img
-              src="/logo.png"
-              alt="InnovicSolutions Logo"
-              className="w-24 h-12 sm:w-28 sm:h-14 object-contain -ml-8"
-            />
-            <span className="text-2xl md:text-4xl font-extrabold text-orange-900 ">
+            <Link to="/" className="flex items-center">
+  <img
+    src="/innovic-logo.jpeg"
+    alt="InnovicSolutions Logo"
+    className="w-40 h-12 md:h-14 sm:w-36 sm:h-18 object-contain scale-110 cursor-pointer"
+  />
+</Link>
+            {/* <span className="text-2xl md:text-4xl font-extrabold text-orange-900 ">
               InnovicSolutions
-            </span>
+            </span> */}
           </div>
 
           {/* Desktop Nav */}
@@ -93,50 +95,52 @@ const Header: React.FC = () => {
                 (link.submenu &&
                   link.submenu.some((item) => item.href === location.pathname));
 
-              return link.submenu ? (
-                <div key={link.title} className="relative">
-                  <button
-                    type="button"
-                    onClick={() =>
-                      setOpenDropdown(
-                        openDropdown === link.title ? null : link.title
-                      )
-                    }
-                    className={`font-medium ${
-                      isActive
-                        ? "text-purple-700 border-b-2 border-purple-700"
-                        : "text-orange-900 hover:underline"
-                    }`}
-                  >
-                    {link.title}
-                  </button>
+             return link.submenu ? (
+  <div
+    key={link.title}
+    className="relative"
+    onMouseEnter={() => setOpenDropdown(link.title)}
+    onMouseLeave={() => setOpenDropdown(null)}
+  >
+    <button
+      type="button"
+      onClick={() =>
+        setOpenDropdown(
+          openDropdown === link.title ? null : link.title
+        )
+      }
+      className={`font-medium ${
+        isActive
+          ? "text-purple-700 border-b-2 border-purple-700"
+          : "text-orange-900 hover:underline"
+      }`}
+    >
+      {link.title}
+    </button>
 
-                  {/* Dropdown */}
-                  {openDropdown === link.title && (
-                    <div
-                      className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg py-2 z-50"
-                      onMouseLeave={() => setOpenDropdown(null)}
-                    >
-                      {link.submenu.map((item) => {
-                        const isSubActive = item.href === location.pathname;
-                        return (
-                          <Link
-                            key={item.title}
-                            to={item.href}
-                            className={`block px-4 py-2 text-sm ${
-                              isSubActive
-                                ? "text-purple-700 font-semibold"
-                                : "text-orange-900 hover:bg-gray-100"
-                            }`}
-                          >
-                            {item.title}
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  )}
-                </div>
-              ) : (
+    {/* Dropdown (shows on hover or click) */}
+    {openDropdown === link.title && (
+      <div className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg py-2 z-50">
+        {link.submenu.map((item) => {
+          const isSubActive = item.href === location.pathname;
+          return (
+            <Link
+              key={item.title}
+              to={item.href}
+              className={`block px-4 py-2 text-sm ${
+                isSubActive
+                  ? "text-purple-700 font-semibold"
+                  : "text-orange-900 hover:bg-gray-100"
+              }`}
+            >
+              {item.title}
+            </Link>
+          );
+        })}
+      </div>
+    )}
+  </div>
+) : (
                 <Link
                   key={link.title}
                   to={link.href || "/"}
