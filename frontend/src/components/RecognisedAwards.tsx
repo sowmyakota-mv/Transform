@@ -44,7 +44,7 @@ const RecognisedAwards: React.FC = () => {
 
         <ScrollAnimation delay={200}>
           <p className="text-gray-600 mb-12 max-w-3xl mx-auto">
-            Over the years, Transform UK has consistently been acknowledged for
+            Over the years, Innovic Solutions has consistently been acknowledged for
             driving impactful transformation, innovation, and leadership. Our
             commitment to excellence has earned us recognition across multiple
             industries worldwide.

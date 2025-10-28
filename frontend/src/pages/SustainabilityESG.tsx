@@ -6,7 +6,7 @@ import { FaCheckSquare } from "react-icons/fa";
 const esgServicesData = [
   {
     title: "Designing Sustainable Services",
-    desc: `Transform UK emphasizes the importance of integrating sustainability into service design. 
+    desc: `Innovic Solutions emphasizes the importance of integrating sustainability into service design. 
 Their approach focuses on creating services that not only meet user needs but also minimize environmental impact 
 and promote social value. This involves:`,
     points: [
@@ -18,7 +18,7 @@ and promote social value. This involves:`,
   },
   {
     title: "Net Zero Systems Tool",
-    desc: `Transform UK's innovative Net Zero Systems Tool aids UK government departments in making informed decisions 
+    desc: `Innovic Solution's innovative Net Zero Systems Tool aids UK government departments in making informed decisions 
 to achieve carbon neutrality. Recognized with the DataIQ Awards - Data for Good - Environmental, Social, and Governance (ESG) Data Award, 
 the tool utilizes data visualization to:`,
     points: [
@@ -30,7 +30,7 @@ the tool utilizes data visualization to:`,
   },
   {
     title: "ESG Data Integration",
-    desc: `Transform UK integrates ESG factors into data strategies, helping organizations align their operations with sustainability goals. 
+    desc: `Innovic Solutions integrates ESG factors into data strategies, helping organizations align their operations with sustainability goals. 
 By embedding ESG considerations into data analytics, they enable clients to:`,
     points: [
       "Assess ESG Performance: Evaluate how well their operations align with ESG criteria.",

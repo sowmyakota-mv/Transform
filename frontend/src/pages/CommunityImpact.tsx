@@ -9,7 +9,7 @@ const CommunityImpact: React.FC = () => {
       title: "Empowering Change",
       color: "from-pink-500 to-red-600",
       paragraphs: [
-        "At Transform, we believe technology is more than innovation  it’s a catalyst for meaningful human change. Every product, strategy, and idea we build aims to make the world a more connected, inclusive, and empowered place.",
+        "At Innovic Solutions, we believe technology is more than innovation  it’s a catalyst for meaningful human change. Every product, strategy, and idea we build aims to make the world a more connected, inclusive, and empowered place.",
         "We’re not just adapting to the digital era; we’re shaping it with responsibility and empathy, ensuring every advancement benefits both people and planet.",
       ],
       points: [
@@ -99,7 +99,7 @@ const CommunityImpact: React.FC = () => {
         Shaping a Responsible Digital Future
       </h2>
       <p className="text-lg animate-fade-up delay-200">
-        We see community impact not as a side project, but as a shared mission. Through technology, empathy, and innovation, Transform is redefining how businesses create real-world change — sustainably, inclusively, and collaboratively.
+        We see community impact not as a side project, but as a shared mission. Through the technology, empathy, and innovation, Innovic Solutions is redefining how businesses create real-world change  sustainably, inclusively, and collaboratively.
       </p>
     </div>
   </ScrollAnimation>

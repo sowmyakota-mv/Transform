@@ -197,7 +197,7 @@ const UXDesign: React.FC = () => {
                 Elevated User Satisfaction
               </h3>
               <p>
-                Deliver user experiences that delight, engage, and convert —
+                Deliver user experiences that delight, engage, and convert 
                 building loyalty through every interaction.
               </p>
             </div>

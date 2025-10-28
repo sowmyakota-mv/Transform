@@ -13,7 +13,7 @@ const navLinks: NavItem[] = [
   {
     title: "Explore Us",
     submenu: [
-      { title: "About Transform", href: "/abouttransform" },
+      { title: "About Innovic", href: "/aboutinnovic" },
       { title: "People Behind Innovation", href: "/people-behind-innovation" },
       { title: "Future Sustainability", href: "/sustainability" },
       { title: "Community Impact", href: "/impact" },

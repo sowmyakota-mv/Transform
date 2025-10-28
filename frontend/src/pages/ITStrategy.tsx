@@ -16,7 +16,7 @@ const itServicesData = [
   },
   {
     title: "Transforming Public Sector IT for Impact",
-    desc: "Transform UK specializes in helping organizations unlock the full potential of their people through tailored development, strategic guidance, and lasting cultural change.",
+    desc: "Innovic Solutions specializes in helping organizations unlock the full potential of their people through tailored development, strategic guidance, and lasting cultural change.",
     points: [
       "Digital Transformation: Align strategy, systems, and service delivery for operational efficiency.",
       "AI & Data Strategy: Leverage AI and data analytics to drive innovation and streamline operations.",

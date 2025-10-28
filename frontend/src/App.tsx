@@ -11,7 +11,6 @@ import RecognisedAwards from './components/RecognisedAwards'
 import OurProjects from './components/OurProjects'
 import SuccessStories from './components/SuccessStories'
 import RegisterCTA from './components/RegisterCTA'
-import AboutTransform from './pages/AboutTransform'
 import PeopleBehindInnovation from './pages/PeopleBehindInnovation'
 import FutureSustainability from './pages/FutureSustainability'
 import CommunityImpact from './pages/CommunityImpact'
@@ -35,6 +34,7 @@ import AIExperiments from './pages/AIExperiments'
 import PrototypeProjects from './pages/PrototypeProjects'
 import FutureTech from './pages/FutureTech'
 import Hackathons from './pages/Hackathons'
+import AboutInnovic from './pages/AboutInnovic'
 
 function App() {
   return (
@@ -54,7 +54,7 @@ function App() {
             <RegisterCTA />
           </div>
         } />
-        <Route path="/abouttransform" element={<AboutTransform />} />   
+        <Route path="/aboutinnovic" element={<AboutInnovic />} />   
         <Route path='/people-behind-innovation' element={<PeopleBehindInnovation/>}/>
         <Route path='sustainability' element={<FutureSustainability/>}/>
         <Route path='impact' element={<CommunityImpact/>}/>

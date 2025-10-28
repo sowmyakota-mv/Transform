@@ -109,7 +109,7 @@ const FutureSustainability: React.FC = () => {
         className="text-lg mb-3 animate-fade-up delay-200 text-[#E8F0EE]"
         style={{ fontFamily: "'Manrope', sans-serif", lineHeight: "1.8" }}
       >
-        At Transform, our work aligns with the UN’s Sustainable Development Goals,
+        At Innovic Solutions, our work aligns with the UN’s Sustainable Development Goals,
         ensuring measurable progress and positive impact.
       </p>
 

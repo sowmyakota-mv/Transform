@@ -4,7 +4,7 @@ import ScrollAnimation from "../animation/ScrollAnimation";
 import { useNavigate } from "react-router-dom";
 import { CheckSquare } from "lucide-react"; // ✅ Import checkbox icon
 
-const AboutTransform: React.FC = () => {
+const AboutInnovic: React.FC = () => {
   const navigate = useNavigate();
 
   // Helper component for reusable checkbox list
@@ -22,14 +22,14 @@ const AboutTransform: React.FC = () => {
   );
 
   return (
-    <div id="abouttransform" className="bg-white text-gray-900 py-8">
+    <div id="aboutinnovic" className="bg-white text-gray-900 py-8">
 
       {/* Hero Section */}
       <ScrollAnimation delay={100}>
         <section className="relative h-[500px] flex flex-col justify-center items-center text-center px-6 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 text-white">
           <h1 className="text-5xl font-extrabold mb-6 max-w-[900px]">Beyond Now: Our Purpose in Motion</h1>
           <p className="max-w-[800px] text-lg leading-relaxed">
-            Transform is not just about building for today. We are shaping tomorrow. 
+            Innovic is not just about building for today. We are shaping tomorrow. 
             We design, deliver, and evolve systems that help organizations confront 
             their biggest challenges with clarity and impact.
           </p>
@@ -133,7 +133,7 @@ const AboutTransform: React.FC = () => {
         <div className="md:w-1/2">
           <h2 className="text-4xl font-bold mb-6 text-purple-700">People & Principles</h2>
           <p className="mb-4">
-            At the heart of Transform are people  driven by values, bound by collaboration, 
+            At the heart of Innovic are people  driven by values, bound by collaboration, 
             and committed to continuous learning. We don’t just build systems; we build cultures of care.
           </p>
           <p className="mb-6">
@@ -208,4 +208,4 @@ const AboutTransform: React.FC = () => {
   );
 };
 
-export default AboutTransform;
+export default AboutInnovic;

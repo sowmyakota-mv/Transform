@@ -47,7 +47,7 @@ const PeopleBehindInnovation: React.FC = () => {
   <div className="relative text-center max-w-4xl mx-auto mb-16">
     <h2 className="text-4xl md:text-5xl font-bold mb-6">The People Behind Innovation</h2>
     <p className="text-lg opacity-90">
-      At Transform, innovation thrives through a culture of curiosity, collaboration, and impact.
+      At Innovic Solutions, innovation thrives through a culture of curiosity, collaboration, and impact.
       Our team leverages expertise & experience to help organisations transform, grow, & make a meaningful difference in their industries.
     </p>
     <p className="mt-4 text-lg opacity-90">

@@ -9,7 +9,7 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import ScrollAnimation from "../animation/ScrollAnimation";
-import innovicLogo from "/logo.png";
+import innovicLogo from "/innovic-logo.jpeg";
 
 const Footersection: React.FC = () => {
   const [showMore, setShowMore] = useState(false);
