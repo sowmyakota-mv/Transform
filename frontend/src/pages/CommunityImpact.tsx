@@ -9,7 +9,7 @@ const CommunityImpact: React.FC = () => {
       title: "Empowering Change",
       color: "from-pink-500 to-red-600",
       paragraphs: [
-        "At Transform, we believe technology is more than innovation — it’s a catalyst for meaningful human change. Every product, strategy, and idea we build aims to make the world a more connected, inclusive, and empowered place.",
+        "At Transform, we believe technology is more than innovation  it’s a catalyst for meaningful human change. Every product, strategy, and idea we build aims to make the world a more connected, inclusive, and empowered place.",
         "We’re not just adapting to the digital era; we’re shaping it with responsibility and empathy, ensuring every advancement benefits both people and planet.",
       ],
       points: [
@@ -25,13 +25,13 @@ const CommunityImpact: React.FC = () => {
       title: "Sustainable by Design",
       color: "from-green-500 to-emerald-600",
       paragraphs: [
-        "Our sustainability approach goes beyond efficiency — it’s embedded in our design DNA. We’re building systems and solutions that reduce carbon footprints while enhancing scalability and longevity.",
+        "Our sustainability approach goes beyond efficiency  it’s embedded in our design DNA. We’re building systems and solutions that reduce carbon footprints while enhancing scalability and longevity.",
         "From eco-friendly hosting to carbon-aware development practices, we ensure digital transformation aligns with environmental stewardship.",
       ],
       points: [
         "Optimizing code and infrastructure for lower energy consumption.",
         "Encouraging cloud providers with renewable energy commitments.",
-        "Designing for longevity — reducing digital waste and reusability.",
+        "Designing for longevity  reducing digital waste and reusability.",
         "Supporting climate-focused startups with digital expertise.",
         "Advocating for green data centers and responsible AI usage.",
       ],
@@ -46,7 +46,7 @@ const CommunityImpact: React.FC = () => {
       ],
       points: [
         "Championing women and underrepresented groups in tech.",
-        "Designing for accessibility — every user matters.",
+        "Designing for accessibility  every user matters.",
         "Encouraging inclusive AI models and unbiased data systems.",
         "Mentorship programs empowering the next generation of innovators.",
         "Global partnerships promoting digital inclusion for all.",
@@ -58,7 +58,7 @@ const CommunityImpact: React.FC = () => {
       color: "from-blue-500 to-cyan-600",
       paragraphs: [
         "True innovation begins with empathy. Our mission is to build digital experiences that enhance mental, emotional, and societal wellbeing.",
-        "From employee wellness programs to designing intuitive digital ecosystems, we ensure technology serves humanity — not the other way around.",
+        "From employee wellness programs to designing intuitive digital ecosystems, we ensure technology serves humanity  not the other way around.",
       ],
       points: [
         "Creating user-first designs that reduce cognitive overload.",
@@ -73,7 +73,7 @@ const CommunityImpact: React.FC = () => {
       title: "Impact Through Collaboration",
       color: "from-orange-500 to-pink-600",
       paragraphs: [
-        "We believe lasting change happens when we collaborate — across industries, geographies, and communities. Transform partners with organizations that share our commitment to responsible progress.",
+        "We believe lasting change happens when we collaborate  across industries, geographies, and communities. Transform partners with organizations that share our commitment to responsible progress.",
         "Our collaborations range from educational initiatives to sustainable enterprise projects, amplifying collective impact through shared purpose.",
       ],
       points: [

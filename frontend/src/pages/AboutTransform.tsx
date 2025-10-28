@@ -43,7 +43,7 @@ const AboutTransform: React.FC = () => {
           <p className="mb-4">
             Right now, we’re helping organizations harness the full power of data, technology, and design. 
             Our mission is simple: deliver impact that lasts. We move fast, but with care, 
-            ensuring sustainable transformation that doesn’t just tick boxes — it changes realities.
+            ensuring sustainable transformation that doesn’t just tick boxes it changes realities.
           </p>
           <p className="mb-6">
             From public systems to enterprise ecosystems, our solutions blend capability and culture. 
@@ -72,7 +72,7 @@ const AboutTransform: React.FC = () => {
         <div className="md:w-1/2">
           <h2 className="text-4xl font-bold mb-6 text-purple-700">Designing the Next Horizon</h2>
           <p className="mb-4">
-            Complexity isn’t something to fear — it’s where the future happens. We’re building strategies 
+            Complexity isn’t something to fear  it’s where the future happens. We’re building strategies 
             that turn uncertainty into possibility, and possibility into sustainable action.
           </p>
           <p className="mb-6">
@@ -103,7 +103,7 @@ const AboutTransform: React.FC = () => {
           <h2 className="text-4xl font-bold mb-6 text-purple-700">Foundations That Fuel Us</h2>
           <p className="mb-4">
             Behind every transformation, there are fundamentals that guide how we think, design, 
-            and deliver. These pillars aren’t just capabilities — they’re commitments.
+            and deliver. These pillars aren’t just capabilities  they’re commitments.
           </p>
           <p className="mb-6">
             They define how we approach challenges and what makes our approach distinctive 
@@ -111,11 +111,11 @@ const AboutTransform: React.FC = () => {
           </p>
           <CheckboxList
             items={[
-              "Insight & Intelligence — turning data into clarity.",
-              "Service Design — creating systems people want to use.",
-              "Engineering Excellence — scalable, resilient platforms.",
-              "Change & Adoption — making change stick, not just happen.",
-              "Purpose & Impact — driving equity and social value.",
+              "Insight & Intelligence turning data into clarity.",
+              "Service Design  creating systems people want to use.",
+              "Engineering Excellence  scalable, resilient platforms.",
+              "Change & Adoption  making change stick, not just happen.",
+              "Purpose & Impact  driving equity and social value.",
             ]}
           />
         </div>
@@ -133,7 +133,7 @@ const AboutTransform: React.FC = () => {
         <div className="md:w-1/2">
           <h2 className="text-4xl font-bold mb-6 text-purple-700">People & Principles</h2>
           <p className="mb-4">
-            At the heart of Transform are people — driven by values, bound by collaboration, 
+            At the heart of Transform are people  driven by values, bound by collaboration, 
             and committed to continuous learning. We don’t just build systems; we build cultures of care.
           </p>
           <p className="mb-6">
@@ -163,7 +163,7 @@ const AboutTransform: React.FC = () => {
         <div className="md:w-1/2">
           <h2 className="text-4xl font-bold mb-6 text-purple-700">Impact in Action</h2>
           <p className="mb-4">
-            The true measure of our work isn’t found in systems delivered — it’s found in 
+            The true measure of our work isn’t found in systems delivered  it’s found in 
             the difference those systems make. We measure success by the lives improved, 
             the efficiency gained, and the fairness achieved.
           </p>
@@ -190,10 +190,10 @@ const AboutTransform: React.FC = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-6 max-w-[1200px] mx-auto text-center bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-700 text-white rounded-2xl shadow-lg mb-12">
+      <section className="py-20 px-6 -mb-24 max-w-[1200px] mx-auto text-center bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-700 text-white rounded-2xl shadow-lg ">
         <h2 className="text-4xl font-bold mb-6">Join the Evolution</h2>
         <p className="mb-6 max-w-[800px] mx-auto">
-          This isn’t just about projects — it’s about partnership. Together, 
+          This isn’t just about projects  it’s about partnership. Together, 
           we can build beyond now, shaping systems that leave lasting impact.
         </p>
         <button 

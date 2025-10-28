@@ -140,7 +140,7 @@ const ContactSection: React.FC = () => {
                     Phone Number
                   </label>
                   <PhoneInput
-                    country={"in"}
+                    country={"gb"}
                     value={formData.phone}
                     onChange={(phone) => setFormData((prev) => ({ ...prev, phone }))}
                     inputClass="!w-full !border !border-gray-300 !rounded-lg !p-3 !pl-14 !focus:ring-2 !focus:ring-[#0FB9B1] !focus:outline-none"

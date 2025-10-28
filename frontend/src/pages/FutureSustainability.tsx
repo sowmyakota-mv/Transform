@@ -8,7 +8,7 @@ const FutureSustainability: React.FC = () => {
   const pillars = [
     {
       title: "Delivering Net Positive Impact",
-      desc: "We don’t just deliver projects — we aim to generate measurable social, environmental, and economic benefits for our clients and communities.",
+      desc: "We don’t just deliver projects - we aim to generate measurable social, environmental, and economic benefits for our clients and communities.",
       points: [
         "Support clients in delivering socially valuable products.",
         "Integrate sustainability principles into every engagement.",

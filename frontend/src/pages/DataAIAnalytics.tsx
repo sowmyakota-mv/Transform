@@ -155,7 +155,7 @@ const DataAIAnalytics: React.FC = () => {
       </div>
 
       {/* Benefits Section */}
-      <div className="bg-cyan-600 py-20 text-white">
+      <div className="bg-cyan-600 py-20 text-white -mb-20">
         <div className="max-w-6xl mx-auto px-6 md:px-20 text-center">
           <h2 className="text-3xl font-bold mb-8">Benefits of Data, AI & Analytics</h2>
           <div className="grid md:grid-cols-3 gap-8 text-left">

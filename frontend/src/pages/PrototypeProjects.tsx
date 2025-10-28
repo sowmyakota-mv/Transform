@@ -25,7 +25,7 @@ const prototypes = [
     icon: <Hand className="w-10 h-10 text-blue-600" />,
     title: "Gesture-Controlled IoT Devices",
     desc: "Control smart devices with intuitive hand gestures.",
-    details: `This prototype integrates gesture recognition with IoT devices, allowing users to operate lights, fans, and AC units with hand movements. Using computer vision and Arduino-based IoT integration, it demonstrates natural and touchless human-machine interaction — a step towards futuristic smart homes and offices.`,
+    details: `This prototype integrates gesture recognition with IoT devices, allowing users to operate lights, fans, and AC units with hand movements. Using computer vision and Arduino-based IoT integration, it demonstrates natural and touchless human-machine interaction  a step towards futuristic smart homes and offices.`,
     tags: ["IoT", "Gesture Control", "Computer Vision", "Prototyping"],
     bg: "from-blue-50 to-cyan-100",
   },

@@ -24,7 +24,7 @@ const DigitalTransformation: React.FC = () => {
         At <span className="text-cyan-600 font-semibold">Innovic Solutions</span>, we combine strategy, creativity, and technology to empower enterprises to evolve with agility in the digital age. Our transformation framework ensures alignment between people, processes, and platforms to accelerate innovation.
       </p>
       <p className="text-slate-700 mb-8">
-        Whether you’re modernizing legacy systems or scaling new digital ecosystems, we enable seamless <span className="text-cyan-600 font-semibold">digital transformation journeys</span> — from vision to value delivery — ensuring measurable business outcomes at every step.
+        Whether you’re modernizing legacy systems or scaling new digital ecosystems, we enable seamless <span className="text-cyan-600 font-semibold">digital transformation journeys</span>  from vision to value delivery  ensuring measurable business outcomes at every step.
       </p>
       <Link
         to="/contact"
@@ -64,7 +64,7 @@ const DigitalTransformation: React.FC = () => {
           Transforming Strategy into Impact
         </h2>
         <p className="text-slate-700 leading-relaxed">
-          <span className="text-cyan-600 font-bold">Digital transformation</span> is more than technology — it’s about embedding innovation into every level of your organization. We blend strategy, data, and engineering to modernize operations and deliver tangible results.
+          <span className="text-cyan-600 font-bold">Digital transformation</span> is more than technology  it’s about embedding innovation into every level of your organization. We blend strategy, data, and engineering to modernize operations and deliver tangible results.
         </p>
         <ul className="list-none mt-4 space-y-2 text-slate-700">
   {[
@@ -99,7 +99,7 @@ const DigitalTransformation: React.FC = () => {
               <p className="text-slate-700 leading-relaxed mb-4">
                 Organizations that embrace digital ecosystems can proactively
                 adapt to new opportunities, drive continuous innovation, and
-                maintain competitive advantage. It’s no longer an option — it’s a
+                maintain competitive advantage. It’s no longer an option  it’s a
                 necessity for modern success.
               </p>
               <ul className="list-none pl-6 mt-4 text-slate-700 space-y-2">
@@ -237,7 +237,7 @@ const DigitalTransformation: React.FC = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-cyan-700 to-cyan-500 py-16 text-center text-white">
+      <div className="bg-gradient-to-r from-cyan-700 to-cyan-500 py-16 text-center text-white -mb-28">
         <h3 className="text-3xl font-bold mb-4">
           Ready to Lead Your Digital Future?
         </h3>

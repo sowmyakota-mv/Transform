@@ -125,7 +125,7 @@ const Footersection: React.FC = () => {
           />
           <p className="text-gray-400 text-base md:text-2xlg leading-relaxed max-w-3xl">
             Innovic Solutions partners with Transform UK to deliver
-            forward-thinking digital transformation solutions — empowering
+            forward-thinking digital transformation solutions empowering
             enterprises with intelligent automation, cloud innovation, and
             sustainable strategies that reshape the future of business growth
             and impact.{" "}

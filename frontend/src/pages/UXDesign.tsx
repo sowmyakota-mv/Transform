@@ -186,7 +186,7 @@ const UXDesign: React.FC = () => {
       </div>
 
       {/* Benefits Section */}
-      <div className="bg-pink-800 py-20 text-white">
+      <div className="bg-pink-800 py-20 text-white -mb-16">
         <div className="max-w-6xl mx-auto px-6 md:px-20 text-center">
           <h2 className="text-3xl font-bold mb-10">
             Key Benefits of UX & Design Innovation

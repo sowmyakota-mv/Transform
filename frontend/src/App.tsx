@@ -55,7 +55,7 @@ function App() {
           </div>
         } />
         <Route path="/abouttransform" element={<AboutTransform />} />   
-        <Route path='/people' element={<PeopleBehindInnovation/>}/>
+        <Route path='/people-behind-innovation' element={<PeopleBehindInnovation/>}/>
         <Route path='sustainability' element={<FutureSustainability/>}/>
         <Route path='impact' element={<CommunityImpact/>}/>
         <Route path='/expertise/digital-transformation' element={<DigitalTransformation/>}/>

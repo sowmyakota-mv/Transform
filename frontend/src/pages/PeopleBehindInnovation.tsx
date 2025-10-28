@@ -5,7 +5,7 @@ import { CheckSquare } from "lucide-react"; // ✅ Checkbox icon
 const PeopleBehindInnovation: React.FC = () => {
   const voices = [
     {
-      quote: "Innovation is not about technology alone — it’s about people who care enough to reimagine what’s possible.",
+      quote: "Innovation is not about technology alone - it’s about people who care enough to reimagine what’s possible.",
       author: "Sarah Collins, Head of Experience Design",
     },
     {
@@ -71,7 +71,7 @@ const PeopleBehindInnovation: React.FC = () => {
 
               <CheckboxList
                 items={[
-                  "Collaboration over hierarchy — every voice matters.",
+                  "Collaboration over hierarchy  every voice matters.",
                   "Empathy-driven innovation to meet real-world needs.",
                   "Transparency and integrity in all our projects.",
                   "Commitment to sustainability and social value.",

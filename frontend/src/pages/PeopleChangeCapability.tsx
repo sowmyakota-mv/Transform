@@ -35,7 +35,7 @@ import ScrollAnimation from "../animation/ScrollAnimation";
   },
   {
     title: "Proven Success in Public Sector Transformation",
-    desc: "Transform UK's expertise is particularly evident in public sector transformations, such as the Health Improvement Services Transition (HIST) Programme. Their four-stage change management journey—encompassing vision creation, planning, implementation, and embedding—has been instrumental in delivering clarity, continuity, and long-term impact in complex public health initiatives.",
+    desc: "Transform UK's expertise is particularly evident in public sector transformations, such as the Health Improvement Services Transition (HIST) Programme. Their four-stage change management journey encompassing vision creation, planning, implementation, and embedding has been instrumental in delivering clarity, continuity, and long-term impact in complex public health initiatives.",
     img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80", // fixed
   },
   {

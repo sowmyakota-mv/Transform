@@ -80,7 +80,7 @@ const PlatformEngineering: React.FC = () => {
                   Technology & Platform Engineering integrates advanced
                   technologies, software frameworks, and robust engineering
                   methods to build reliable systems that support digital
-                  transformation. It’s the backbone of innovation — combining
+                  transformation. It’s the backbone of innovation  combining
                   strategy, infrastructure, and code to deliver seamless digital
                   experiences.
                 </p>
@@ -105,7 +105,7 @@ const PlatformEngineering: React.FC = () => {
                 <p className="text-slate-700">
                   By applying software engineering best practices and advanced
                   tech frameworks, businesses can ensure their digital platforms
-                  are secure, adaptable, and performance-optimized — ready to
+                  are secure, adaptable, and performance-optimized ready to
                   scale as the organization grows.
                 </p>
               </div>
@@ -200,7 +200,7 @@ const PlatformEngineering: React.FC = () => {
       </div>
 
       {/* Benefits Section */}
-      <div className="bg-cyan-600 py-20 text-white">
+      <div className="bg-cyan-600 py-20 text-white -mb-16">
         <div className="max-w-6xl mx-auto px-6 md:px-20 text-center">
           <h2 className="text-3xl font-bold mb-10">
             Key Benefits of Technology & Platform Engineering
