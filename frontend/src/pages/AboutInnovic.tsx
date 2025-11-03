@@ -190,7 +190,7 @@ const AboutInnovic: React.FC = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-6 -mb-24 max-w-[1200px] mx-auto text-center bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-700 text-white rounded-2xl shadow-lg ">
+      <section className="py-20 px-6 -mb-24 max-w-[1200px] mx-auto text-center bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-700 text-white md:rounded-2xl shadow-lg ">
         <h2 className="text-4xl font-bold mb-6">Join the Evolution</h2>
         <p className="mb-6 max-w-[800px] mx-auto">
           This isn’t just about projects  it’s about partnership. Together, 

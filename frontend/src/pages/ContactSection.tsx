@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Mail, Phone, MapPin, ChevronDown } from "lucide-react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
-import ScrollAnimation from "../animation/ScrollAnimation"; // import scroll animation
+import ScrollAnimation from "../animation/ScrollAnimation";
 
 const servicesList = [
   "Cloud Solutions",
@@ -26,7 +26,13 @@ const ContactSection: React.FC = () => {
   });
   const [search, setSearch] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
-  const [submitted, setSubmitted] = useState(false); // Track submission
+  const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
   const filteredServices = servicesList.filter((service) =>
     service.toLowerCase().includes(search.toLowerCase())
@@ -37,6 +43,7 @@ const ContactSection: React.FC = () => {
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: "" })); // Clear error as user types
   };
 
   const handleServiceSelect = (service: string) => {
@@ -47,6 +54,17 @@ const ContactSection: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    let newErrors: any = {};
+    if (!formData.name.trim()) newErrors.name = "Please fill this field";
+    if (!formData.email.trim()) newErrors.email = "Please fill this field";
+    if (!formData.phone.trim()) newErrors.phone = "Please fill this field";
+    if (!formData.message.trim()) newErrors.message = "Please fill this field";
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) return; // Stop if errors
+
     console.log("Form Submitted:", formData);
     setFormData({ name: "", email: "", phone: "", service: "", message: "" });
     setSubmitted(true);
@@ -54,7 +72,6 @@ const ContactSection: React.FC = () => {
 
   return (
     <section className="bg-gradient-to-b from-[#E8F4FA] to-white py-20 px-6 md:px-16">
-      {/* Scroll animation for title */}
       <ScrollAnimation delay={100}>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1D2B47] mb-3 mt-12">
@@ -67,7 +84,6 @@ const ContactSection: React.FC = () => {
         </div>
       </ScrollAnimation>
 
-      {/* Scroll animation for contact container */}
       <ScrollAnimation delay={200}>
         <div className="bg-white rounded-3xl shadow-2xl overflow-hidden grid md:grid-cols-2">
           {/* Left Info Panel */}
@@ -78,7 +94,7 @@ const ContactSection: React.FC = () => {
               </h1>
               <p className="text-white/90 text-lg md:text-xl leading-relaxed">
                 Let’s build something extraordinary together. Whether you’re looking
-                for innovation, technology, or transformation — we’re just one message
+                for innovation, technology, or transformation  we’re just one message
                 away from helping you achieve success.
               </p>
             </div>
@@ -107,7 +123,7 @@ const ContactSection: React.FC = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-gray-700 font-medium mb-2">
-                      Your Name
+                      Your Name <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -116,12 +132,15 @@ const ContactSection: React.FC = () => {
                       value={formData.name}
                       onChange={handleChange}
                       className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#0FB9B1] focus:outline-none"
-                      required
                     />
+                    {errors.name && (
+                      <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                    )}
                   </div>
+
                   <div>
                     <label className="block text-gray-700 font-medium mb-2">
-                      Your Email
+                      Your Email <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="email"
@@ -130,19 +149,23 @@ const ContactSection: React.FC = () => {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#0FB9B1] focus:outline-none"
-                      required
                     />
+                    {errors.email && (
+                      <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                    )}
                   </div>
                 </div>
 
                 <div className="mt-6">
                   <label className="block text-gray-700 font-medium mb-2">
-                    Phone Number
+                    Phone Number <span className="text-red-500">*</span>
                   </label>
                   <PhoneInput
                     country={"gb"}
                     value={formData.phone}
-                    onChange={(phone) => setFormData((prev) => ({ ...prev, phone }))}
+                    onChange={(phone) =>
+                      setFormData((prev) => ({ ...prev, phone }))
+                    }
                     inputClass="!w-full !border !border-gray-300 !rounded-lg !p-3 !pl-14 !focus:ring-2 !focus:ring-[#0FB9B1] !focus:outline-none"
                     buttonClass="!bg-white !border-gray-300 !mr-2"
                     dropdownClass="!text-gray-800"
@@ -150,6 +173,9 @@ const ContactSection: React.FC = () => {
                     placeholder="Enter your phone number"
                     enableSearch={true}
                   />
+                  {errors.phone && (
+                    <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                  )}
                 </div>
 
                 <div className="mt-6 relative">
@@ -186,7 +212,9 @@ const ContactSection: React.FC = () => {
                             </li>
                           ))
                         ) : (
-                          <li className="px-4 py-2 text-gray-500">No services found</li>
+                          <li className="px-4 py-2 text-gray-500">
+                            No services found
+                          </li>
                         )}
                       </ul>
                     )}
@@ -195,7 +223,7 @@ const ContactSection: React.FC = () => {
 
                 <div className="mt-6">
                   <label className="block text-gray-700 font-medium mb-2">
-                    Message
+                    Message 
                   </label>
                   <textarea
                     name="message"
@@ -204,8 +232,10 @@ const ContactSection: React.FC = () => {
                     onChange={handleChange}
                     rows={4}
                     className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#0FB9B1] focus:outline-none"
-                    required
                   ></textarea>
+                  {errors.message && (
+                    <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+                  )}
                 </div>
 
                 <button

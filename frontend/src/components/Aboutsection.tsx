@@ -114,7 +114,7 @@ const Aboutsection: React.FC = () => {
   sticks.
   <br />
   <button
-    onClick={() => navigate("/abouttransform")}
+    onClick={() => navigate("/aboutinnovic")}
     className="mt-6 inline-flex items-center space-x-2 px-6 py-3 text-cyan-600 font-semibold text-base rounded-lg border border-cyan-600 transition-all duration-300 hover:bg-cyan-600 hover:text-2xl hover:text-white  hover:shadow-md"
     style={{ fontFamily: "'Inter', sans-serif" }}
   >

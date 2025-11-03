@@ -216,7 +216,9 @@ const Header: React.FC = () => {
               </div>
             ))}
             <div className="pt-3">
-              <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-lg">
+              <button onClick={()=>{navigate("/contact");
+                setMenuOpen(false)}
+              } className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-lg">
                 Register
               </button>
             </div>

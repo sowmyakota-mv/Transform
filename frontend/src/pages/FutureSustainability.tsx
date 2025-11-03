@@ -106,7 +106,7 @@ const FutureSustainability: React.FC = () => {
       </h2>
 
       <p
-        className="text-lg mb-3 animate-fade-up delay-200 text-[#E8F0EE]"
+        className="text-sm mb-3 animate-fade-up delay-200 text-[#E8F0EE]"
         style={{ fontFamily: "'Manrope', sans-serif", lineHeight: "1.8" }}
       >
         At Innovic Solutions, our work aligns with the UN’s Sustainable Development Goals,
@@ -114,7 +114,7 @@ const FutureSustainability: React.FC = () => {
       </p>
 
       <p
-        className="text-lg animate-fade-up delay-300 text-[#E8F0EE]"
+        className="text-sm animate-fade-up delay-300 text-[#E8F0EE]"
         style={{ fontFamily: "'Manrope', sans-serif", lineHeight: "1.8" }}
       >
         We combine social good, responsible practices, and innovative technology
