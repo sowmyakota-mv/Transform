@@ -63,7 +63,7 @@ const Header: React.FC = () => {
   return (
     <>
       <header
-        className="fixed left-8 right-8 mt-5 z-50 overflow-visible"
+        className="fixed left-8 right-8  z-50 overflow-visible"
         style={{
           backgroundColor: "#ffffff",
           borderTop: "12px solid",

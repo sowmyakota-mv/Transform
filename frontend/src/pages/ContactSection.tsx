@@ -43,7 +43,7 @@ const ContactSection: React.FC = () => {
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    setErrors((prev) => ({ ...prev, [name]: "" })); // Clear error as user types
+    setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
   const handleServiceSelect = (service: string) => {
@@ -63,11 +63,23 @@ const ContactSection: React.FC = () => {
 
     setErrors(newErrors);
 
-    if (Object.keys(newErrors).length > 0) return; // Stop if errors
+    if (Object.keys(newErrors).length > 0) return;
 
-    console.log("Form Submitted:", formData);
-    setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-    setSubmitted(true);
+    // ✅ EmailJS integration
+    const serviceID = "your_service_id";
+    const templateID = "your_template_id";
+    const publicKey = "your_public_key";
+
+    emailjs
+      .send(serviceID, templateID, formData, publicKey)
+      .then(() => {
+        console.log("Email successfully sent!");
+        setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+        setSubmitted(true);
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+      });
   };
 
   return (
@@ -94,25 +106,41 @@ const ContactSection: React.FC = () => {
               </h1>
               <p className="text-white/90 text-lg md:text-xl leading-relaxed">
                 Let’s build something extraordinary together. Whether you’re looking
-                for innovation, technology, or transformation  we’re just one message
+                for innovation, technology, or transformation we’re just one message
                 away from helping you achieve success.
               </p>
             </div>
 
             <h3 className="text-2xl font-semibold mt-4">Contact Us</h3>
             <div className="space-y-5 text-white">
-              <div className="flex items-center gap-3 text-lg">
+              {/* ✅ Phone - Dialer */}
+              <a
+                href="tel:+919811253572"
+                className="flex items-center gap-3 text-lg hover:text-gray-200 transition"
+              >
                 <Phone size={20} />
                 <p>+91 9811253572</p>
-              </div>
-              <div className="flex items-center gap-3 text-lg">
+              </a>
+
+              {/* ✅ Email - Mailto */}
+              <a
+                href="mailto:info@innovicsolutions.com"
+                className="flex items-center gap-3 text-lg hover:text-gray-200 transition"
+              >
                 <Mail size={20} />
                 <p>info@innovicsolutions.com</p>
-              </div>
-              <div className="flex items-center gap-3 text-lg">
+              </a>
+
+              {/* ✅ Location - Google Maps */}
+              <a
+                href="https://www.google.com/maps?q=Bangalore,India"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-lg hover:text-gray-200 transition"
+              >
                 <MapPin size={20} />
                 <p>Bangalore, India</p>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -158,7 +186,7 @@ const ContactSection: React.FC = () => {
 
                 <div className="mt-6">
                   <label className="block text-gray-700 font-medium mb-2">
-                    Phone Number <span className="text-red-500">*</span>
+                    Phone Number
                   </label>
                   <PhoneInput
                     country={"gb"}
@@ -223,7 +251,7 @@ const ContactSection: React.FC = () => {
 
                 <div className="mt-6">
                   <label className="block text-gray-700 font-medium mb-2">
-                    Message 
+                    Message
                   </label>
                   <textarea
                     name="message"
