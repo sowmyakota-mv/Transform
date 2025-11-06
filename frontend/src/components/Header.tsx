@@ -232,7 +232,7 @@ const Header: React.FC = () => {
           <div
             className="hidden md:block fixed left-0 right-0 z-40"
             style={{
-              top: "calc(5rem + 40px)",
+              top: "calc(5rem + 20px)",
               height: "5px",
               background: "linear-gradient(to right, #C4D7EF)",
               opacity: 0.4,
@@ -242,7 +242,7 @@ const Header: React.FC = () => {
           <div
             className="block md:hidden fixed left-0 right-0 z-40"
             style={{
-              top: "112px",
+              top: "92px",
               height: "5px",
               background: "linear-gradient(to right, #C4D7EF)",
               opacity: 0.4,
